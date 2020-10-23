@@ -159,13 +159,69 @@ Damit ist die Länge des Vektors, und somit der Strecke, welcher $w_0$ und $w_z$
 
 In der Aufgabenstellung wird nach dem Produkt aller Verbindungsstrecken gefragt.
 Damit ist dieses Produkt, welches wir nun $X$ nennen, gleich
-\[X = |(w_1-1)|\times|(w_2-1)|\times\dots\times|(w_n-1-1)|\]
+\[X = |(w_1-1)|\times|(w_2-1)|\times\dots\times|(w_{n-1}-1)|\]
 Jeder Faktor dieses Produkts ist der Betrag der jeweiligen Klammer, was bedeutet, dass man in jeder Klammer statt $(w_z-1)$ auch $(1-w_z)$ schreiben kann, ohne den Betrag zu verändern.
 Das gesamte Produkt ist dann gleich 
-\[X=|(1-w_1)|\times|(1-w_2)|\times\dots|(1-w_n-1)|\]
+\[X=|(1-w_1)|\times|(1-w_2)|\times\dots|(1-w_{n-1})|\]
+Nach den Regeln der Multiplikation von Beträgen ist das Produkt der Beträge von Faktoren gleich dem Betrag des Proddukts dieser Faktoren. Also gilt
+\begin{equation}\label{X}
+	X=|(1-w_1)\times(1-w_2)\times\dots(1-w_{n-1})|
+\end{equation}
 
-An dieser Stelle muss man sich daran erinnern, dass die Eckpunkte des Vielecks auch als Wurzel der Gleichung $z^n-1=0$ dargestellt werden können. Die erweiterte Fassung des Fundamentalsatzes der Algebra (\ref{eq:funda2}) besagt nun, dass
-\[z^n-1=(z-w_0)\times(z-w_1)\times(z-w_2)\times\dots(z-w_n-1)\]
+An dieser Stelle lasst uns den Term, welcher sich innerhalb der Betragsstriche in $X$ liegt ansehen.
+Nennen wir diesen Term $H$, so ist $X=|H|$ und
+\begin{equation}\label{H}
+	H=(1-w_1)\times(1-w_2)\times\dots(1-w_n-1)
+\end{equation}
+
+Erinnern wir uns, dass die Eckpunkte des Vielecks auch als Wurzel der Gleichung $z^n-1=0$ dargestellt werden können. Die erweiterte Fassung des Fundamentalsatzes der Algebra (\ref{eq:funda2}) besagt nun, dass
+\[z^n-1=(z-w_0)\times(z-w_1)\times(z-w_2)\times\dots(z-w_{n-1})\]
+da $w_0=1$ ist, folgt
+\[z^n-1=(z-1)\times(z-w_1)\times(z-w_2)\times\dots(z-w_{n-1})\]
+Diese Gleichung ist nahezu identisch mit $H$ bei $z=1$.
+Der einzige Unterschied ist der Faktor $z-1$, welcher bei $H$ fehlt.
+Möchten wir nun unsere Gleichung ohne diesen Faktor berechnen, so müssen wir sie durch $(z-1)$ teilen und es entsteht
+\begin{equation}\label{frac}
+	H=(z-w_1)\times(z-w_2)\times\dots(z-w_{n-1})=\frac{z^n-1}{z-1}
+\end{equation}
+bei $z=1$. Dies kann auch aufgeschrieben werden als
+\[\frac{z^n-1}{z-1}=\frac{1-z^n}{1-z\hspace{2mm}}\]
+Da wir versuchen, diese Gleichung bei $z=1$ zu lösen, müssen wir über einen Umweg gehen, ansonsten würde bei einem direkten Einsetzen der Nenner gleich $0$ sein.
+Dabei fällt auf, dass $\frac{1-z^n}{1-z\hspace{1mm}}$ die Zusammenfassung einer geometrischen Reihe ist.
+(Eine Geometrische Reihe $G_n$ ist ein Term der Form $a+aq+aq^2+\dots+aq^n$.)
+Dass dies wahr ist lässt sich mithilfe der vollständigen Induktion zeigen.
+
+"Wir werden beweisen, daß [sic!] für jeden Wert von $n$ [\dots]
+\begin{equation}
+	G_n=a+aq+aq^2+\dots+aq^n=a\frac{1-q^{n+1}}{1-q\hspace{6mm}}.
+\end{equation} 
+(Wir setzen $q\ne1$, lies: $q$ ungleich $1$,v voraus, da sonst die rechte Seite von [der obenstehenden Behauptung] keinen Sinn hätte.)
+
+Diese Behauptung ist für $n=1$ sicher gültig; denn dann besagt sie, daß [sic]
+\[G_1=a+aq=\frac{a(1-q^2)}{1-q}=\frac{a(1+q)(1-q)}{1-q}=a(1+q).\]
+Wenn wir nun annehmen, daß [sic]
+\[G_r=a+aq+\dots+aq^r=a\frac{1-q^{r+1}}{1-q},\]
+dann finden wir als Folgerung daraus
+\begin{multline}
+	G-{r+1}=(a+aq+\dots+aq^r)+aq^{r+1}=G_r+aq^{r+1}=a\frac{1-q^{r+1}}{1-q\hspace{6mm}}+aq^{r+1}\\
+	=a\frac{(1-q^{r+1})+q^{r+1}(1-q)}{1-q}=a\frac{1-q^{r+1}+q^{r+1}-q^{r+2}}{1-q}=a\frac{1-q^{r+2}}{1-q\hspace{6mm}}
+\end{multline}
+Dies ist aber gerade die Behauptung [, die wir beweisen,] für den Fall $n=r+1$. Damit ist der Beweis vollständig."(Zitat-Zeug)
+
+Nun können wir $\frac{1-z^n}{1-z}$ als eine Geometrische Reihe aufschreiben.
+\[1\times\frac{1-z^n}{1-z\hspace{2mm}}=1+z+z^2+\dots+z^{n-1}\]
+Da $\frac{z^n-1}{z-1}=\frac{1-z^n}{1-z\hspace{1mm}}$ ist, gilt bei $z=1$
+\[\frac{z^n-1}{z-1}=1+1+1^2+\dots+1^{n-1}=n\]
+da die $1$ in dieser geometrischen Reihe insgesamt $n$ mal vorkommt.
+
+Den Term $\frac{z^n-1}{z-1}$ haben wir ursprünglich aufgestellt, da er nach der Gleichung (\ref{H}) äquivalent zu $H$ ist. Damit ist
+\[H=n\]
+$H$ selber war der Term innerhalb der Betragsstriche von $X$, denn $X=|H|$.
+Da nun $H=n$ ist mit $n$ als eine zwingend positive Zahl, lässt sich $H$ mit $X$ direkt gleichstellen und man schließt heraus, dass:
+\[X=n\]
+$X$ ist das Produkt aller Längen der Strecken, die eine Ecke des ursprünglichen Vielecks mit den verbinden. Somit ist die Aufgabe gelöst und jenes Produkt ist gleich der Anzahl der Ecken im Vieleck.
+
+
 
 
 
