@@ -1,48 +1,48 @@
 
 
-\documentclass[a4paper,12pt]{article} % добавить leqno в [] для нумерации слева
+\documentclass[a4paper,12pt]{article} % Dokunmentklasse
 
-%%% Работа с русским языком
-\usepackage{cmap}					% поиск в PDF
-\usepackage[T2A]{fontenc}			% кодировка
-\usepackage[utf8]{inputenc}			% кодировка исходного текста
-\usepackage[ngerman]{babel}	% локализация и переносы
+%%% Arbeit mit Sprache
+\usepackage{cmap}					% Suche im PDF
+\usepackage[T2A]{fontenc}			% Kodierung
+\usepackage[utf8]{inputenc}			% Kodierung Ursprungstext
+\usepackage[ngerman]{babel}	% Sprache
 
-%%% Дополнительная работа с математикой
+%%% Erweiterungen für Mathematik
 \usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
-\usepackage{icomma} % "Умная" запятая: $0,2$ --- число, $0, 2$ --- перечисление
+\usepackage{icomma} % Intelligent comma
 
-%% Номера формул
-\mathtoolsset{showonlyrefs=true} % Показывать номера только у тех формул, на которые есть \eqref{} в тексте.
+%% Formelnummer
+\mathtoolsset{showonlyrefs=true} % Zeigt die Nummer der Formel nur wenn mit \eqref{} auf sie im Text verwiesen wird.
 
-%%% Страница
-\usepackage{extsizes} % Возможность сделать 14-й шрифт
-\usepackage{geometry} % Простой способ задавать поля
+%%% Seite
+\usepackage{extsizes} % Mehr verschiedener Schriftgrößen
+\usepackage{geometry} % Einstellung der Ränder
 \geometry{top=25mm}
 \geometry{bottom=25mm}
 \geometry{left=35mm}
 \geometry{right=25mm}
 
-\usepackage{fancyhdr} % Колонтитулы
+\usepackage{fancyhdr} % Kopf- und Fußzeile
 \pagestyle{fancy}
-\renewcommand{\headrulewidth}{0mm}  % Толщина линейки, отчеркивающей верхний колонтитул
-\lfoot{Нижний левый}
-\rfoot{Нижний правый}
-\rhead{Верхний правый}
-\chead{Верхний в центре}
-\lhead{Верхний левый}
-% \cfoot{Нижний в центре} % По умолчанию здесь номер страницы
+\renewcommand{\headrulewidth}{0mm}  % Dicke der Linie unter der Kopfzeile
+\lfoot{Unten Links}
+\rfoot{Unten Rechts}
+\rhead{Oben Rechts}
+\chead{Oben Mitte}
+\lhead{Oben Links}
+% \cfoot{Unten Mitte} % falls nicht angegeben: Seitennummer
 
-\usepackage{setspace} % Интерлиньяж
-\onehalfspacing % Интерлиньяж 1.5
-%\doublespacing % Интерлиньяж 2
-%\singlespacing % Интерлиньяж 1
+\usepackage{setspace} % Zeilenabstand
+\onehalfspacing % Zeilenabstand 1.5
+%\doublespacing % Zeilenabstand 2
+%\singlespacing % Zeilenabstand 1
 
-%% Шрифты
+%% Schriften
 \usepackage{euscript}
 %\usepackage{times}
-\usepackage{mathptmx} %times
-%\usepackage{mathrsfs} % Красивый матшрифт
+%\usepackage{mathptmx} %times
+\usepackage{mathrsfs} % Schöne Matheschrift
 
 %% Перенос знаков в формулах (по Львовскому)
 \newcommand*{\hm}[1]{#1\nobreak\discretionary{}
@@ -103,7 +103,7 @@ Und da $(a - a) \times f(a) = 0 \times g(x) = 0 $ ist gilt:
 \[ f(a) = r(a) \]
 In Worten ausgedrückt:
 
-\noindent \textit{Teilt man ein Polynom $f(x)$ durch den Term $(x-a)$, so ist der Rest dieser Division gleich dem Wert der Funktion $f(x)$ bei $x=a$.}
+\noindent \emph{Teilt man ein Polynom $f(x)$ durch den Term $(x-a)$, so ist der Rest dieser Division gleich dem Wert der Funktion $f(x)$ bei $x=a$.}
 
 \noindent Diese Tatsache hat im Deutschen keinen eigenen Namen, ist jedoch im englischsprachigen Raum als das "Little Bézout's theorem" bekannt.
 
@@ -126,10 +126,37 @@ Insgesamt lässt sich diese Methode auf dem Polynom $n$ mal verwenden und es tei
 	\boxed{	a_nz^n + a_{n-1}z^{n-1} + a_{n-2}z^{n-2} + \dots + a_1z + a_0 = 0
 	}
 \end{equation}
-besitzt \underline{genau $n$} Lösungen in $\mathbb{C}$, wobei die Vielfachheit der Lösung beachtet werden muss.
+besitzt \emph{genau $n$} Lösungen in $\mathbb{C}$, wobei die Vielfachheit der Lösung beachtet werden muss.
 
 
 \section{Kreisteilungsgleichungen}
+
+Die komplexen Zahlen sind jedoch nicht nur zur Lösung von Polynomen verwendbar, sondern werden auch bei Aufgaben benutzt, die auf den ersten Blick gar nicht mit traditioneller Algebra verbunden sind.
+Um diese Aspekte zu erkennen, müssen wir jedoch zuerst ihre geometrische Darstellung betrachten.
+
+Jede komplexe Zahl $z$ lässt sich in der Form $z=a+bi$ schreiben, mit $a$ und $b$ als reelle Zahlen.
+Hierbei besteht sie aus zwei Teilen.
+Das $a$ wird als der "Realteil" $Re(z)$ der Zahl $z$ bezeichnet, dagegen ist $b$ der "{Imaginärteil}" $Im(z)$.
+Geometrisch werden solche Zahlen leicht unerwartet dargestellt. Die reellen Zahlen sind offensichtlicher-weise ein Spezialfall der komplexen Zahlen, nämlich wenn der Imaginärteil gleich null ist.
+Da alle reelle Zahlen in einer Zahlengerade visualisiert werden und $\mathbb{R}$ eine Teilmenge von $\mathbb{C}$ ist, muss auch in der geometrischen Form diese Zahlengerade ein Teil der Darstellung der Komplexen Zahlen sein.
+Dies wird elegant gelöst.
+
+Bei der komplexen Zahlenebene $\mathbb{C}$ handelt es sich um ein klassisches descartsches Koordinatensystem mit einer Achse, welche die Größe des Realteils der komplexen Zahl angibt, und der zweiten Achse für den Imaginärteil. Somit ist die Realachse gleichzeitig auch die Zahlengerade von $\mathbb{R}$, da für jeden Punkt auf ihr gilt $Im(z)=0$.
+
+Wir können nun komplexe Zahlen als Punkte in einem Koordinatensystem betrachten.
+Statt der Klassischen Angabe der Position mit zwei Werten, einen für jede Achse, kann auch hier die Polarform benutzt werden.
+In einem solchen Fall wäre bei, einem Winkel $\varphi$ und der Entfernung zum Ursprung $l$, der Realteil der Zahl gleich $Re(z)=l\times\cos(\varphi)$ und der Imaginärteil $Im(z)=l\times\sin(\varphi)$.
+
+(Taylorpolynom om om om om)
+
+
+
+
+
+
+
+
+
 
 \section{Beispiel der Anwendung}
 
