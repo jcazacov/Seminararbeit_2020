@@ -146,8 +146,23 @@ Bei der komplexen Zahlenebene $\mathbb{C}$ handelt es sich um ein klassisches de
 Wir können nun komplexe Zahlen als Punkte in einem Koordinatensystem betrachten.
 Statt der Klassischen Angabe der Position mit zwei Werten, einen für jede Achse, kann auch hier die Polarform benutzt werden.
 In einem solchen Fall wäre bei, einem Winkel $\varphi$ und der Entfernung zum Ursprung $l$, der Realteil der Zahl gleich $Re(z)=l\times\cos(\varphi)$ und der Imaginärteil $Im(z)=l\times\sin(\varphi)$.
+Jede komplexe Zahl ist also gleich $z=l\times(\cos(\varphi)+\sin(\varphi))$
 
-(Taylorpolynom om om om om)
+Betrachten wir nun den Sinus, beziehungsweise den Kosinus.
+Wollen wir sie mit anderen Funktionen vergleichen, so wäre es besser wenn sie in der Polynomform vorlägen, da mit dieser in der Algebra leicht umgegangen werden kann.
+Hierzu benötigen wir das Taylorpolynom.
+Dieses Polynom ist perfekt dazu geeignet komplizierte Funktionen mit hoher Genauigkeit anzunähern.
+Das Polynom lässt sich nur dann anwenden, wenn die anzunähernde Funktion sich zureichend oft ableiten lässt, am besten unbeschränkt oft.
+Für sowohl den Sinus als auch den Kosinus gilt dass, bei wiederholter Ableitung laufen sie durch die Werte $\sin(x)$, $\cos(x)$, $-\sin(x)$ und $-\cos(x)$ unendlich oft durch.
+Das Taylorpolynom kann mit einer angegebenen Entwicklungsstelle $x_0$ den Wert jeder Funktion $f(x)$ an der Position $x$ durch die Formel
+\begin{equation}
+	T_n(x)=\frac{f(x_0)}{0!}\times(x-x_0)^0 + \frac{f(x_0)}{1!}\times(x-x_0)^1 + \frac{f(x_0)}{2!}\times(x-x_0)^2 + \dots +\frac{f(x_0)}{n!}\times(x-x_0)^n
+\end{equation} %Video von Mathepeter
+,wobei bei steigender Anzahl $n$ der Polynomglieder die Genauigkeit der Annäherung steigt. Als $x_0$ wird ein Wert ausgesucht bei dem die Berechnungen einfacher durchzuführen sind. 
+
+
+
+
 
 
 
@@ -218,15 +233,15 @@ Dabei fällt auf, dass $\frac{1-z^n}{1-z\hspace{1mm}}$ die Zusammenfassung einer
 (Eine Geometrische Reihe $G_n$ ist ein Term der Form $a+aq+aq^2+\dots+aq^n$.)
 Dass dies wahr ist lässt sich mithilfe der vollständigen Induktion zeigen.
 
-"Wir werden beweisen, daß [sic!] für jeden Wert von $n$ [\dots]
+"Wir werden beweisen, daß [sic!] für jeden Wert von $n$ [$\dots$]
 \begin{equation}
 	G_n=a+aq+aq^2+\dots+aq^n=a\frac{1-q^{n+1}}{1-q\hspace{6mm}}.
 \end{equation} 
 (Wir setzen $q\ne1$, lies: $q$ ungleich $1$,v voraus, da sonst die rechte Seite von [der obenstehenden Behauptung] keinen Sinn hätte.)
 
-Diese Behauptung ist für $n=1$ sicher gültig; denn dann besagt sie, daß [sic]
+Diese Behauptung ist für $n=1$ sicher gültig; denn dann besagt sie, daß [sic!]
 \[G_1=a+aq=\frac{a(1-q^2)}{1-q}=\frac{a(1+q)(1-q)}{1-q}=a(1+q).\]
-Wenn wir nun annehmen, daß [sic]
+Wenn wir nun annehmen, daß [sic!]
 \[G_r=a+aq+\dots+aq^r=a\frac{1-q^{r+1}}{1-q},\]
 dann finden wir als Folgerung daraus
 \begin{multline}
