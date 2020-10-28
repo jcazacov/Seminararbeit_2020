@@ -156,9 +156,45 @@ Das Polynom lässt sich nur dann anwenden, wenn die anzunähernde Funktion sich 
 Für sowohl den Sinus als auch den Kosinus gilt dass, bei wiederholter Ableitung laufen sie durch die Werte $\sin(x)$, $\cos(x)$, $-\sin(x)$ und $-\cos(x)$ unendlich oft durch.
 Das Taylorpolynom kann mit einer angegebenen Entwicklungsstelle $x_0$ den Wert jeder Funktion $f(x)$ an der Position $x$ durch die Formel
 \begin{equation}
-	T_n(x)=\frac{f(x_0)}{0!}\times(x-x_0)^0 + \frac{f(x_0)}{1!}\times(x-x_0)^1 + \frac{f(x_0)}{2!}\times(x-x_0)^2 + \dots +\frac{f(x_0)}{n!}\times(x-x_0)^n
+	T_n(x)=\frac{f(x_0)}{0!}\times(x-x_0)^0 + \frac{f^{(1)}(x_0)}{1!}\times(x-x_0)^1 +% \frac{f^{(2)}(x_0)}{2!}\times(x-x_0)^2 +
+	\dots +\frac{f^{(n)}(x_0)}{n!}\times(x-x_0)^n
 \end{equation} %Video von Mathepeter
-,wobei bei steigender Anzahl $n$ der Polynomglieder die Genauigkeit der Annäherung steigt. Als $x_0$ wird ein Wert ausgesucht bei dem die Berechnungen einfacher durchzuführen sind. 
+wobei bei steigender Anzahl $n$ der Polynomglieder die Genauigkeit der Annäherung steigt.
+
+Versuchen wir nun den $cos(x)$durch ein unendlich langes Taylorpolynom, eine sogenannte Taylorreihe, so sehr anzunähern, dass das Polynom getrost der Funktion gleichgesetzt werden kann.
+Wir bestimmen $x_0=0$, da an dieser Stelle die Sinus- und Kosinuswerte einfach bestimmt werden können.
+\[cos(x)=\frac{cos(0)}{0!}\times(x-0) + \frac{-sin(0)}{1!}\times(x-0) + \frac{-cos(0)}{2!}\times(x-0)^2+\frac{sin(0)}{3!}\times(x-0)^3+\dots\]
+Dabei fällt auf, dass bei jedem zweiten Polynomglied im Zähler des Bruches ein positives oder negatives $sin(0)$ vorliegt.
+Da $sin(0)=0$ ist, lässt sich das Polynom vereinfachen zu
+\[cos(x)=1-\frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^6}{6!}+\frac{x^8}{8!}+\dots\]
+Die Polynomformen anderer Funktionen erhält man nach analogem Verfahren, wie hier die Sinusfunktion
+\[sin(x)=x-\frac{x}{1!}+\frac{x^3}{3!}-\frac{x^5}{5!}+\frac{x^7}{7!}+\dots\]
+oder hier die $e$-Funktion
+\[e^x=1+\frac{x}{1!}+\frac{x^2}{2!}+\frac{x^3}{3!}+\frac{x^4}{4!}+\dots\]
+
+Mithilfe des Sinus und Kosinus können wir nun komplexe Zahlen als Polynome aufschreiben. Sehen wir uns der Einfachheit halber zuerst eine Zahl an, die auf dem Einheitskreis liegt und damit als $l=1$ hat.
+\begin{equation}
+	z=%\times(\cos(\varphi)+i\times\sin(\varphi))=
+	\left(1-\frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^6}{6!}+\dots\right)+i\times\left(x-\frac{x}{1!}+\frac{x^3}{3!}-\frac{x^5}{5!}+\dots\right)
+\end{equation}
+Vergleicht man nun $z$ mit der Polynomform von $e^\varphi$ stellt man fest, dass sie gleich sind. 
+In dem Taylorpolynom haben die Polynomglieder im Zähler ein $i^n\varphi^n$. Wir müssen nun bedenken, dass $i^2=-1$ ist und durch Umformungen und Umgruppierungen entsteht
+\begin{multline}
+	e^i\varphi=1+\frac{i\varphi}{1!}+\frac{i^2\varphi^2}{2!}+\frac{i^3\varphi^3}{3!}+\frac{i^4\varphi^4}{4!}+\dots=
+	1+\frac{i\varphi}{1!}-\frac{\varphi^2}{2!}-\frac{i\varphi^3}{3!}+\frac{\varphi^4}{4!}+\dots=\\
+	\left(1-\frac{\varphi^2}{2!}+\frac{\varphi^4}{4!}-\frac{\varphi^6}{6!}+\dots\right)+i\times\left(\varphi-\frac{\varphi}{1!}+\frac{x\varphi^3}{3!}-\frac{\varphi^5}{5!}+\dots\right) =\\
+	\cos(\varphi) + i\times\sin(\varphi)=z
+\end{multline}
+Hierbei handelt es sich um die berühmte "{Eulersche Formel}", welche Besagt, dass
+\[e^{i\varphi}=\cos(\varphi)+i\times\sin(\varphi)\]
+Daraus folgt, dass komplexe Zahlen auf dem Einheitskreis durch den Term $e^{i\varphi}$ dargestellt werden können. Für andere komplexe Zahlen muss noch der Abstand $l$ vom Ursprung bedacht werden und für sie gilt
+\[z=l\times e^{i\varphi}\]
+Sind komplexe Zahlen in dieser Form geschrieben, so ist offensichtlich, dass Multiplikation von komplexen Zahlen durch eine Multiplikation der Längen und Addition der Winkel erreicht wird
+\[z_1\times z_2=(l_1 \times e^{i\varphi_1}) \times (l_2 \times e^{i\varphi_2})=l_1 l_2 \times e^{i(\varphi_1+\varphi_2)}\]
+Im Fall von Potenzieren von komplexen Zahlen gilt nach den Regeln der Multiplikation dann
+\[l^n \times e^{i(n\varphi)}\]
+
+
 
 
 
