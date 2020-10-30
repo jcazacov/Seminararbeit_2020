@@ -44,20 +44,24 @@
 %\usepackage{mathptmx} %times
 \usepackage{mathrsfs} % Schöne Matheschrift
 
-%% Перенос знаков в формулах (по Львовскому)
+%% Zeilenumbruch in Formeln
 \newcommand*{\hm}[1]{#1\nobreak\discretionary{}
 {\hbox{$\mathsurround=0pt #1$}}{}}
 
-%%% Заголовок
+%%% Kopfzeile
 \author{Jacob Cazacov}
 \title{Komplexe Zahlen von algebraischer Sicht aus betrachtet}
 \date{\today}
 
+\usepackage{cite} % Bibliographie
+%\usepackage[superscript]{cite} % Verweise in obere Zeilen
+%\usepackage[nocompress]{cite} % 
+\usepackage{csquotes} % Weiteres Werkzeug für Verweise
 
 
 
 
-\begin{document} % конец преамбулы, начало документа
+\begin{document} % Dokumentbeginn
 
 \maketitle
 
@@ -310,5 +314,5 @@ $X$ ist das Produkt aller Längen der Strecken, die eine Ecke des ursprüngliche
 
 
 
-\end{document} % конец документа
+\end{document} % Dokumentende
 
