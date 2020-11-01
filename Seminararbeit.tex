@@ -73,7 +73,34 @@
 
 \section{Einleitung}
 
-Die Einführung der komplexen Zahlen war eine äußerst wichtige Errungenschaft, der Mathematik. Die Idee, dass man einen neuen Zahlenbereich einführen könnte, welcher auf den ersten Blick keinerlei Realitätsbezug hat, wurde lange Zeit von Mathematikern aller Welt als sinnlos gesehen. Erst als das entdeckerische Verlangen, alle Geheimnisse unserer Welt über Zahlen zu lüften, die Wissenschaftler an das Ende aller anschaulicher und einfacher Mathematik trieb, waren sie bereit, diesen Sprung zu wagen. Und mit erstaunlichem Erfolg. Denn Komplexe Zahlen bieten nicht nur einen Lösungsweg für Polynome höheren Grades, sondern können große Teile der Geometrie sehr einfach in rein algebraischer Form ausdrücken, mit welcher man viel bequemer rechnen kann (Beleg erforderlich). Insgesamt bildet das Rechnen in $\mathbb{C}$ ein sehr wichtiges Werkzeug für eine Vielzahl von Naturwissenschaften.
+Die Einführung der komplexen Zahlen war eine der wichtigsten Errungenschaft der Mathematik.
+Die Idee, dass man einen neuen Zahlenbereich einführen könnte, welcher auf den ersten Blick keinerlei Realitätsbezug habe, wurde lange Zeit von Mathematikern aller Welt als sinnlos gesehen.
+Erst als das entdeckerische Verlangen, alle Geheimnisse unserer Welt über Zahlen zu lüften, die Wissenschaftler an das Ende aller anschaulicher und einfacher Mathematik trieb, waren sie bereit, diesen Sprung zu wagen.
+Und mit erstaunlichem Erfolg. Denn Komplexe Zahlen bieten nicht nur einen Lösungsweg für Polynome höheren Grades, sondern können große Teile der Geometrie sehr einfach in rein algebraischer Form ausdrücken, mit welcher man viel bequemer rechnen kann.
+Insgesamt bildet das Rechnen in $\mathbb{C}$ ein sehr wichtiges Werkzeug für eine Vielzahl von Naturwissenschaften.
+
+\section{Geschichte und Definition}
+
+Der Zahlenbereich der reellen Zahlen war lange Zeit lang der größte und all umfassendste Zahlenbereich, den die Menschheit kannte.
+Er leistete auch sehr gute Dienste, denn mit ihm konnten die nahezu alle algebraische Probleme gelöst werden und für Jahrtausende war dies genügend.
+Umso provozierender war die Gleichung 
+\[x^2+1=0\]
+welche keine Lösung in den reellen Zahlen hatte.
+Das Problem ließ sich leicht umgehen, indem einfach festgelegt wurde, dass diese Gleichung keine Lösung hatte, es war jedoch nicht aus der Welt geschafft.
+Im Jahre 1545 veröffentlichte Geronimo Cardano (1501-1576) in seinem Werk \emph{"{Ars} magna de Regulis Algebraicis"} ein Verfahren, mit dem sich kubische Gleichungen der Form $ax^3+bx^2+cx+d=0$ lösen ließen.
+Dieses Verfahren hatte jedoch ein Problem, als Zwischenergebnisse mussten teilweise Wurzeln aus negativen Zahlen gezogen werden.  
+Da man im Laufe der Zeit auf immer mehr solcher Schwierigkeiten in einer Vielzahl von verschiedenen Aufgaben stoß, entschlossen sich einige Mathematiker das Problem direkt anzugehen.
+
+Somit wurde einfach die imaginäre Einhiet $i$ als
+\[i^2=1\]
+definiert, wobei für $i$ dieselben arithmetischen Regeln gelten, wie für alle anderen Zahlen.
+
+Nun entstanden Zahlen der Form $z=a+ib$, genannt komplexe Zahlen, sowie der Zahlenbereich $\mathbb{C}$, welcher deren Gesamtheit beschreibt.
+
+
+
+
+
 
 \section{Algebraische Abgeschlossenheit von $\mathbb{C}$}
 
@@ -88,18 +115,18 @@ Der sogenannte Fundamentalsatz der Algebra wurde 1799 von Carl Friedrich Gauß i
 a_nz^n + a_{n-1}z^{n-1} + a_{n-2}z^{n-2} + \dots + a_1z + a_0 = 0
 }
 \end{equation} 
-besitzt \underline{mindestens eine} Lösung in $\mathbb{C}$.
+besitzt \underline{mindestens eine} Lösung in $\mathbb{C}$.\\
 
 
 
-Mit diesem Satz lassen sich jegliche Gleichungen in den komplexen Zahlen lösen und er hat somit eine grundlegende Bedeutung für die Algebra.
-Der Fundamentalsatz der Algebra wird manchmal auch in einer leicht verschiedenen, mehr umfassenden Form ausgedrückt, welche sich aus der ersten Formulierung herausleiten lässt.\\
+Mit diesem Satz lassen sich jegliche Polynome in den komplexen Zahlen lösen und er hat somit eine grundlegende Bedeutung für die Algebra.
+Der Fundamentalsatz der Algebra wird manchmal auch in einer leicht verschiedenen, mehr umfassenden Form ausgedrückt, welche sich aus der ersten Formulierung einfach herausleiten lässt.\\
 
 \noindent Man nehme ein beliebiges Polynom $f(x)$ der $n$-ten Ordnung und teile es durch den Term $(x-a)$.
 \begin{equation}\label{eq:bezout1}
 f(x) = (x - a) \times g(x) + r(x)
 \end{equation} 
-Dabei ist $a$ eine beliebige Zahl, $g(x)$ ein Polynom der Ordnung $n-1$ und $r(x)$ der Rest, der aus dieser Teilung hervorgeht.
+Dabei ist $a$ eine beliebige Zahl, $g(x)$ das entstehende Polynom der Ordnung $n-1$ und $r(x)$ der Rest, der aus dieser Teilung hervorgeht.
 Da $f(x)$ durch ein Polynom ersten Grades geteilt wird, ist dieser Rest $r(x)$ eine Konstante.
 Setzt man nun in die obenstehende Gleichung \eqref{eq:bezout1} ein $x=a$, dann folgt:
 \[ f(a) = (a-a) \times g(a) + r(x) \]
@@ -111,65 +138,87 @@ In Worten ausgedrückt:
 
 \noindent Diese Tatsache hat im Deutschen keinen eigenen Namen, ist jedoch im englischsprachigen Raum als das "Little Bézout's theorem" bekannt.
 
-\noindent Da die Nullstelle eines Polynoms per Definition ein $x_0$-Wert ist, bei dem ein beliebiges Polynom $f(x_0) = 0$ ist, folgt aus dem "Little Bézout's theorem":
+Bei einer Nullstelle eines Polynoms, welche per Definition ein $x_0$-Wert ist, bei dem ein beliebiges Polynom $f(x_0) = 0$ ist, folgt aus dem "Little Bézout's theorem" {in} diesem Spezialfall:
+
 \begin{equation}\label{eq:bezout0}
 r(x_0) = f(x_0)=0
 \end{equation}
 Demnach lässt sich jedes Polynom durch das Linearpolynom $(x-x_0)$ restlos teilen.\\
 
-Wenn wir nun ein Polynom $f(x)$ des $n$-ten Grades haben, so können wir dank der ersten Fassung des Fundamentalsatzes der Algebra eine Nullstelle $x_0$ bestimmen. Demzufolge lässt sich nun unser $f(x)$ mithilfe des "Little Bézout's theorem" umformen zu
-\[(x-x_0) \times g(x)\]
+Wenn nun ein Polynom $f(x)$ des $n$-ten Grades vorliegt, so besagt die erste Fassung des Fundamentalsatzes der Algebra, dass eine Nullstelle $x_0$ existiert. Demzufolge lässt sich nun unser $f(x)$ mithilfe des "Little Bézout's theorem" {}umformen zu
+\[f(x)=(x-x_0) \times g(x)\]
 wobei sich f(x) restlos durch $(x-x_0)$ teilt und $g(x)$ ein Polynom $n-1$-ter Ordnung ist.
-Dieses $g(x)$ hat jedoch auch eine Nullstelle $x_1$ nach dem Fundamentalsatz und es lässt sich auch durch $(x-x_1)$ restlos teilen und zu $f(x) = (x-x_0) \times (x-x_1) \times h(x)$ werden. Dieselbe Überlegungen können zu $h(x)$ angewandt werden und so weiter, wobei der Grad der Restfunktion bei jedem Schritt sich um $1$ verkleinert.
+Dieses $g(x)$ hat jedoch nach dem Fundamentalsatz auch eine Nullstelle $x_1$.
+Es lässt sich durch $(x-x_1)$ restlos teilen und damit folgt $f(x) = (x-x_0) \times (x-x_1) \times h(x)$.
+Dieselbe Überlegungen können bei $h(x)$ angewandt werden und so weiter, wobei der Grad der Restfunktion bei jedem Schritt sich um $1$ verkleinert.
 Insgesamt lässt sich diese Methode auf dem Polynom $n$ mal verwenden und es teilt sich ohne Rest in $n$ Faktoren auf. Daraus folgt, dass $f(x)$ $n$ Nullstellen besitzt.
 
-\noindent Nun lässt sich eine weitere Fassung des Fundamentalsatzes formulieren:\\
+Nun lässt sich eine weitere Fassung des Fundamentalsatzes formulieren:\\
 
 \noindent Jede Gleichung der Form (wobei $n \geq 1$):
 \begin{equation}\label{eq:funda2}
 	\boxed{	a_nz^n + a_{n-1}z^{n-1} + a_{n-2}z^{n-2} + \dots + a_1z + a_0 = 0
 	}
 \end{equation}
-besitzt \emph{genau $n$} Lösungen in $\mathbb{C}$, wobei die Vielfachheit der Lösung beachtet werden muss.
+besitzt \underline{genau $n$} Lösungen in $\mathbb{C}$, wobei die Vielfachheit der Lösung beachtet werden muss.
+
+
+
 
 
 \section{Kreisteilungsgleichungen}
 
 Die komplexen Zahlen sind jedoch nicht nur zur Lösung von Polynomen verwendbar, sondern werden auch bei Aufgaben benutzt, die auf den ersten Blick gar nicht mit traditioneller Algebra verbunden sind.
-Um diese Aspekte zu erkennen, müssen wir jedoch zuerst ihre geometrische Darstellung betrachten.
+Um diese Aspekte zu erkennen, müssen wir jedoch zuerst ihre geometrische Darstellung betrachten.\\
 
-Jede komplexe Zahl $z$ lässt sich in der Form $z=a+bi$ schreiben, mit $a$ und $b$ als reelle Zahlen.
+Jede komplexe Zahl $z$ lässt sich wie wir wissen in der Form $z=a+bi$ schreiben, mit $a$ und $b$ als reelle Zahlen.
 Hierbei besteht sie aus zwei Teilen.
 Das $a$ wird als der "Realteil" $Re(z)$ der Zahl $z$ bezeichnet, dagegen ist $b$ der "{Imaginärteil}" $Im(z)$.
-Geometrisch werden solche Zahlen leicht unerwartet dargestellt. Die reellen Zahlen sind offensichtlicher-weise ein Spezialfall der komplexen Zahlen, nämlich wenn der Imaginärteil gleich null ist.
-Da alle reelle Zahlen in einer Zahlengerade visualisiert werden und $\mathbb{R}$ eine Teilmenge von $\mathbb{C}$ ist, muss auch in der geometrischen Form diese Zahlengerade ein Teil der Darstellung der Komplexen Zahlen sein.
-Dies wird elegant gelöst.
+Geometrisch werden solche Zahlen auf leicht unerwartete Weise dargestellt.\\
 
-Bei der komplexen Zahlenebene $\mathbb{C}$ handelt es sich um ein klassisches descartsches Koordinatensystem mit einer Achse, welche die Größe des Realteils der komplexen Zahl angibt, und der zweiten Achse für den Imaginärteil. Somit ist die Realachse gleichzeitig auch die Zahlengerade von $\mathbb{R}$, da für jeden Punkt auf ihr gilt $Im(z)=0$.
+Die reellen Zahlen sind offensichtliche ein Spezialfall der komplexen Zahlen, nämlich wenn der Imaginärteil gleich null ist.
+Damit kann der Wert einer reellen Zahl als der Realteil einer komplexen Zahl angesehen werden.
+Da alle reelle Zahlen als Punkte auf einer Zahlengerade visualisiert werden und $\mathbb{R}$ eine Teilmenge von $\mathbb{C}$ ist, muss auch in der geometrischen Form der komplexen Zahlen die reelle Zahlengerade vorhanden sein.
+Der Imaginärteil wird dagegen in der vollkommen verschiedenen imaginären Einheit $i$ angegeben und lässt sich somit nicht auf dieser Zahlengerade darstellen.
+Um diese beiden Bedingungen zu erfüllen wurde eine elegante Lösung gefunden\\
+
+
+\emph{Bei der komplexen Zahlenebene, auch Gaußsche Zahlenebene genannt, handelt es sich um ein klassisches descartsches Koordinatensystem mit einer Achse, welche die Größe des Realteils $Re(z)$ der komplexen Zahl angibt, und der zweiten Achse für den Imaginärteil $Im(z)$. Jede komplexe Zahl wird als Punkt in dieser Ebene veranschaulicht.}
+
+Somit ist die Realachse gleichzeitig auch die Zahlengerade von $\mathbb{R}$, da für jeden Punkt auf ihr gilt $Im(z)=0$.\\
+
+
+
+
+% Komplexe Zahlenebene Bild
+
+
+
 
 Wir können nun komplexe Zahlen als Punkte in einem Koordinatensystem betrachten.
-Statt der Klassischen Angabe der Position mit zwei Werten, einen für jede Achse, kann auch hier die Polarform benutzt werden.
+Statt der klassischen Angabe der Position mit zwei Werten, einen für jede Achse, kann auch hier die Polarform benutzt werden.
 In einem solchen Fall wäre bei, einem Winkel $\varphi$ und der Entfernung zum Ursprung $l$, der Realteil der Zahl gleich $Re(z)=l\times\cos(\varphi)$ und der Imaginärteil $Im(z)=l\times\sin(\varphi)$.
 Jede komplexe Zahl ist also gleich $z=l\times(\cos(\varphi)+\sin(\varphi))$
 
 Betrachten wir nun den Sinus, beziehungsweise den Kosinus.
 Wollen wir sie mit anderen Funktionen vergleichen, so wäre es besser wenn sie in der Polynomform vorlägen, da mit dieser in der Algebra leicht umgegangen werden kann.
-Hierzu benötigen wir das Taylorpolynom.
+Um dies zu erreichen benötigen wir das Taylorpolynom.
 Dieses Polynom ist perfekt dazu geeignet komplizierte Funktionen mit hoher Genauigkeit anzunähern.
 Das Polynom lässt sich nur dann anwenden, wenn die anzunähernde Funktion sich zureichend oft ableiten lässt, am besten unbeschränkt oft.
-Für sowohl den Sinus als auch den Kosinus gilt dass, bei wiederholter Ableitung laufen sie durch die Werte $\sin(x)$, $\cos(x)$, $-\sin(x)$ und $-\cos(x)$ unendlich oft durch.
+Für sowohl den Sinus als auch den Kosinus gilt dies.
+Bei wiederholter Ableitung laufen sie durch die Werte $\sin(x)$, $\cos(x)$, $-\sin(x)$ und $-\cos(x)$ unendlich oft durch.
 Das Taylorpolynom kann mit einer angegebenen Entwicklungsstelle $x_0$ den Wert jeder Funktion $f(x)$ an der Position $x$ durch die Formel
 \begin{equation}
 	T_n(x)=\frac{f(x_0)}{0!}\times(x-x_0)^0 + \frac{f^{(1)}(x_0)}{1!}\times(x-x_0)^1 +% \frac{f^{(2)}(x_0)}{2!}\times(x-x_0)^2 +
 	\dots +\frac{f^{(n)}(x_0)}{n!}\times(x-x_0)^n
 \end{equation} %Video von Mathepeter
-wobei bei steigender Anzahl $n$ der Polynomglieder die Genauigkeit der Annäherung steigt.
+annähern, wobei bei steigender Anzahl $n$ der Polynomglieder die Genauigkeit der Annäherung steigt.
 
-Versuchen wir nun den $cos(x)$durch ein unendlich langes Taylorpolynom, eine sogenannte Taylorreihe, so sehr anzunähern, dass das Polynom getrost der Funktion gleichgesetzt werden kann.
+Versuchen wir nun den $cos(x)$ durch ein unendlich langes Taylorpolynom, eine sogenannte Taylorreihe, so sehr anzunähern, dass das Polynom getrost der Funktion gleichgesetzt werden kann.
 Wir bestimmen $x_0=0$, da an dieser Stelle die Sinus- und Kosinuswerte einfach bestimmt werden können.
 \[cos(x)=\frac{cos(0)}{0!}\times(x-0) + \frac{-sin(0)}{1!}\times(x-0) + \frac{-cos(0)}{2!}\times(x-0)^2+\frac{sin(0)}{3!}\times(x-0)^3+\dots\]
 Dabei fällt auf, dass bei jedem zweiten Polynomglied im Zähler des Bruches ein positives oder negatives $sin(0)$ vorliegt.
-Da $sin(0)=0$ ist, lässt sich das Polynom vereinfachen zu
+Da $sin(0)=0$ ist, haben diese Glieder keinen Einfluss auf den Wert des Polynoms und können weggelassen werden. In den restlichen Gliedern ligt ein $cos(x)$ vor. Dies ist bei $x=0$ gleich $cos(0)=1$. Damit lässt sich das Polynom vereinfachen zu
 \[cos(x)=1-\frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^6}{6!}+\frac{x^8}{8!}+\dots\]
 Die Polynomformen anderer Funktionen erhält man nach analogem Verfahren, wie hier die Sinusfunktion
 \[sin(x)=x-\frac{x}{1!}+\frac{x^3}{3!}-\frac{x^5}{5!}+\frac{x^7}{7!}+\dots\]
@@ -181,10 +230,10 @@ Mithilfe des Sinus und Kosinus können wir nun komplexe Zahlen als Polynome aufs
 	z=%\times(\cos(\varphi)+i\times\sin(\varphi))=
 	\left(1-\frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^6}{6!}+\dots\right)+i\times\left(x-\frac{x}{1!}+\frac{x^3}{3!}-\frac{x^5}{5!}+\dots\right)
 \end{equation}
-Vergleicht man nun $z$ mit der Polynomform von $e^\varphi$ stellt man fest, dass sie gleich sind. 
-In dem Taylorpolynom haben die Polynomglieder im Zähler ein $i^n\varphi^n$. Wir müssen nun bedenken, dass $i^2=-1$ ist und durch Umformungen und Umgruppierungen entsteht
+Vergleicht man nun $z$ mit der Polynomform von $e^{i\varphi}$ stellt man fest, dass sie gleich sind. 
+In dem Taylorpolynom von $e^{i\varphi}$ haben die Polynomglieder im Zähler ein $i^n\varphi^n$. Wir müssen nun bedenken, dass $i^2=-1$ ist und durch Umformungen und Umgruppierungen entsteht
 \begin{multline}
-	e^i\varphi=1+\frac{i\varphi}{1!}+\frac{i^2\varphi^2}{2!}+\frac{i^3\varphi^3}{3!}+\frac{i^4\varphi^4}{4!}+\dots=
+	e^{i\varphi}=1+\frac{i\varphi}{1!}+\frac{i^2\varphi^2}{2!}+\frac{i^3\varphi^3}{3!}+\frac{i^4\varphi^4}{4!}+\dots=
 	1+\frac{i\varphi}{1!}-\frac{\varphi^2}{2!}-\frac{i\varphi^3}{3!}+\frac{\varphi^4}{4!}+\dots=\\
 	\left(1-\frac{\varphi^2}{2!}+\frac{\varphi^4}{4!}-\frac{\varphi^6}{6!}+\dots\right)+i\times\left(\varphi-\frac{\varphi}{1!}+\frac{x\varphi^3}{3!}-\frac{\varphi^5}{5!}+\dots\right) =\\
 	\cos(\varphi) + i\times\sin(\varphi)=z
@@ -196,11 +245,20 @@ Daraus folgt, dass komplexe Zahlen auf dem Einheitskreis durch den Term $e^{i\va
 Sind komplexe Zahlen in dieser Form geschrieben, so ist offensichtlich, dass Multiplikation von komplexen Zahlen durch eine Multiplikation der Längen und Addition der Winkel erreicht wird
 \[z_1\times z_2=(l_1 \times e^{i\varphi_1}) \times (l_2 \times e^{i\varphi_2})=l_1 l_2 \times e^{i(\varphi_1+\varphi_2)}\]
 Im Fall von Potenzieren von komplexen Zahlen gilt nach den Regeln der Multiplikation dann
-\[l^n \times e^{i(n\varphi)}\]
+\[z^n=l^n \times e^{i(n\varphi)}\]
 
-Einen sehr anschaulichen Effekt hat diese Formel nun wenn wir versuchen ihre geometrische Bedeutung zu Interpretieren. Sie kann nämlich als die Formel für die Lösungen einer Gleichung der Form $z^n=h$ gesehen werden. Setzen wir als $h=1$ ein, so versuchen wir somit  die $n$-te Wurzel aus $1$ zu bestimmen. Benutzen wir nun Formel $l^n \times e^{i(n\varphi)}=1$, muss für jedes $z$ das $l=1$ sein, da $l^n=1$ gilt und $l$ nur positive Werte annehmen kann. Jede mögliche Lösung $z$ für diese Gleichung hat als $\varphi$ einen Winkel, der, wenn er mit $n$ multipliziert wird, ein Vielfaches von $2\pi$ ergibt. die Zahl $1$ hat in ihrer Darstellung als komplexe Zahl den Winkel $\alpha=0$ und somit muss $\varphi\times n$ auch nach beliebig vielen Umdrehungen wieder an der Realachse ankommen. Das $\varphi_1$ der ersten Lösung der Gleichung sowie $2\times\varphi_1$, $3\times\varphi_1$, $4\times\varphi_1$, $\dots$ sind alles Winkel bei denen dies gilt. Es gibt insgesamt $n$ verschiedene solche Winkel, eingeschlossen $\varphi=0$, da beginnend mit dem $n+1$sten der Winkel einem schon vorhandenen anderen $\varphi$ mit zusätzlichen
-vollen Umdrehungen entspricht.
-Dadurch, dass die Winkel gleich $0, \varphi, 2\times \varphi, 3 \times \varphi, \dots$ sind, verteilen sie sich in gleichem Winkelabstand voneinander auf dem Einheitskreis und bilden die Ecken eines gleichmäßiges $n$-Ecks.
+Einen sehr anschaulichen Effekt hat diese Formel nun wenn wir versuchen ihre geometrische Bedeutung zu Interpretieren.
+Sie kann nämlich als die Formel für die Lösungen einer Gleichung der Form $z^n=h$ gesehen werden.
+Setzen wir als $h=1$ ein, so versuchen wir somit  die $n$-te Wurzel aus $1$ zu bestimmen.
+Benutzen wir nun die Formel $l^n \times e^{i(n\varphi)}=1$, muss für jedes $z$ das $l=1$ sein, da $l^n=1$ gilt und $l$ nur positive Werte annehmen kann.
+
+WINKEL VON $z$ ZEUG
+
+%Jede mögliche Lösung $z$ für diese Gleichung hat als $\varphi$ einen Winkel, der, wenn er mit $n$ multipliziert wird, ein Vielfaches von $2\pi$ ergibt.
+%Die Zahl $1$ hat in ihrer Darstellung als komplexe Zahl den Winkel $\alpha=0$ und somit muss $\varphi\times n$ auch nach beliebig vielen Umdrehungen wieder an der Realachse ankommen.
+%Das $\varphi_1$ der ersten Lösung der Gleichung sowie $2\times\varphi_1$, $3\times\varphi_1$, $4\times\varphi_1$, $\dots$ sind alles Winkel bei denen dies gilt.
+%Es gibt insgesamt $n$ verschiedene solche Winkel, eingeschlossen $\varphi=0$, da beginnend mit dem $n+1$sten der Winkel einem schon vorhandenen anderen $\varphi$ mit zusätzlichen vollen Umdrehungen entspricht.
+%Dadurch, dass die Winkel gleich $0, \varphi, 2\times \varphi, 3 \times \varphi, \dots$ sind, verteilen sie sich in gleichem Winkelabstand voneinander auf dem Einheitskreis und bilden die Ecken eines gleichmäßiges $n$-Ecks.
 
 
 
