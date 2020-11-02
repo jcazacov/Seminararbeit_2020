@@ -59,6 +59,13 @@
 \usepackage{csquotes} % Weiteres Werkzeug für Verweise
 
 
+\usepackage{pgfplots}	%GeoGebra
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+
+
+
 
 
 \begin{document} % Dokumentbeginn
@@ -190,8 +197,10 @@ Somit ist die Realachse gleichzeitig auch die Zahlengerade von $\mathbb{R}$, da 
 
 
 
-% Komplexe Zahlenebene Bild
 
+
+% Komplexe Zahlenebene Bild
+ 
 
 
 
@@ -249,24 +258,18 @@ Im Fall von Potenzieren von komplexen Zahlen gilt nach den Regeln der Multiplika
 
 Einen sehr anschaulichen Effekt hat diese Formel nun wenn wir versuchen ihre geometrische Bedeutung zu Interpretieren.
 Sie kann nämlich als die Formel für die Lösungen einer Gleichung der Form $z^n=h$ gesehen werden.
-Setzen wir als $h=1$ ein, so versuchen wir somit  die $n$-te Wurzel aus $1$ zu bestimmen.
-Benutzen wir nun die Formel $l^n \times e^{i(n\varphi)}=1$, muss für jedes $z$ das $l=1$ sein, da $l^n=1$ gilt und $l$ nur positive Werte annehmen kann.
+Setzen wir als $h=1$ ein, so erhalten wir eine Kreisteilungsgleichung $z^n=1$. Wir bestimmen in diesem Fall die $n$-te Wurzel aus $1$.
+Benutzen wir nun die Formel $l^n \times e^{i(n\varphi)}=1$, entspricht $l$ für jedes $z$ gleich $l=1$, da $l^n=1$ gilt und $l$ nur positive Werte annehmen kann.
 
-WINKEL VON $z$ ZEUG
-
-%Jede mögliche Lösung $z$ für diese Gleichung hat als $\varphi$ einen Winkel, der, wenn er mit $n$ multipliziert wird, ein Vielfaches von $2\pi$ ergibt.
-%Die Zahl $1$ hat in ihrer Darstellung als komplexe Zahl den Winkel $\alpha=0$ und somit muss $\varphi\times n$ auch nach beliebig vielen Umdrehungen wieder an der Realachse ankommen.
-%Das $\varphi_1$ der ersten Lösung der Gleichung sowie $2\times\varphi_1$, $3\times\varphi_1$, $4\times\varphi_1$, $\dots$ sind alles Winkel bei denen dies gilt.
-%Es gibt insgesamt $n$ verschiedene solche Winkel, eingeschlossen $\varphi=0$, da beginnend mit dem $n+1$sten der Winkel einem schon vorhandenen anderen $\varphi$ mit zusätzlichen vollen Umdrehungen entspricht.
-%Dadurch, dass die Winkel gleich $0, \varphi, 2\times \varphi, 3 \times \varphi, \dots$ sind, verteilen sie sich in gleichem Winkelabstand voneinander auf dem Einheitskreis und bilden die Ecken eines gleichmäßiges $n$-Ecks.
-
-
-
-
-
-
-
-
+für den Wert des Winkels $\varphi$ gibt es jedoch mehrere Möglichkeiten.
+Damit $e^{in\varphi}$ gleich $1$ ist, muss die Polarform des Terms als Winkel $0$ oder ein Vielfaches von $2\pi$ haben.
+Dadurch fällt der Winkel multipliziert mit $n$ wieder zurück auf die Realachse zum Punkt $(1,0)$.
+Es lässt sich leicht zeigen, dass es auf dem Einheitskreis genau $n$ solche Punkte gibt, welche beide Bedingungen für Länge und Winkel erfüllen.
+Wenn wir nämlich den ersten solchen Punkt $z_1$ ansehen, so hat er als $\varphi=\frac{2\pi}{n}$, um nach $n$ Multiplikationen mit sich selbst nach einer Umdrehung wieder in $1$ zu gelangen.
+Nehmen wir für den nächsten Punkt $z_2$ den doppelten Winkel, so landet der Punkt nach dem Potenzieren mit $n$ mit insgesamt zwei Umdrehungen auf der $1$.
+Der Fundamentalsatz der Algebra besagt, dass es $n$ Lösungen für die Gleichung $e^{i(n\varphi)}=1$ gibt und wenn man dem obengenannten Verfahren weiter folgt, schließt sich, dass diese Lösungen in ihrer geometrischer Form in gleichmäßigen Abständen als Punkte auf dem Einheitskreis platziert sind.
+Sie bilden somit die Ecken eines regelmäßigen Vielecks, welches als eine Ecke den Punkt $(1,0)$ hat.
+Damit ist die graphische Darstellung beliebiger Wurzeln aus $1$ gefunden.
 
 
 
@@ -281,46 +284,47 @@ Eine der Ecken wird mit jeweils jeder anderen Ecke durch Strecken verbunden.
 Was ist das Produkt der Längen dieser Strecken?
 }\\
 
-Aus dem Abschnitt (3...) kennen  wir Kreisteilungsgleichungen. Diese benötigt man zum Lösen der Aufgabe. Zuallererst jedoch muss die komplexe Zahlenebene festgelegt werden. 
+Aus dem Abschnitt (4...) kennen wir Kreisteilungsgleichungen. Diese benötigt man zum Lösen der Aufgabe. Zuallererst jedoch muss die komplexe Zahlenebene festgelegt werden. 
 
-Setzen wir den Ursprung unsres Koordinatensystems in den Mittelpunkt des Kreises und richten es so aus, dass die Achse der Realanteile durch eine der Ecken durchläuft und diese Ecke die Koordinaten $(1,0)$ hat.
+Setzen wir den Ursprung unsres Koordinatensystems in den Mittelpunkt des Kreises und richten es so aus, dass die Achse der Realanteile durch eine der Ecken durchläuft sodass diese Ecke nun die Koordinaten $(1,0)$ hat.
 Jene Ecke nennen wir $w_0$ und von dieser Ecke aus werden wir auch später die Linien zu den anderen Ecken ziehen.\\
 
 Wenn wir nun alle Ecken als komplexe Zahlen ansehen, so können wir die Kreisteilungsgleichungen verwenden und kommen zum Schluss, dass
 \begin{equation}
-	z^n-1=0
+	z^n=1
 \end{equation}
 
 wobei $z$ eine $n$-te Wurzel von $1$ ist und somit auch ein Eckpunkt unseres $n$-Ecks.
-Diese Ecken nennen wir nun $w_1$, $w_2$,$\dots$,$w_{n-1}$, dabei ist $w_n = w_0 = 1$.\\ 
+Diese restlichen Ecken nennen wir nun $w_1$, $w_2$,$\dots$,$w_{n-1}$, dabei ist $w_n = w_0 = 1$.\\ 
 
-Jeder Punkt in einem Koordinatensystem lässt sich auch als ein Vektor beginnend im Ursprung und endend in diesem Punkt darstellen. Komplexe Zahlen in ihrer geometrischer Darstellung werden genauso addieren und subtrahieren wie Vektoren und aus den Regeln der Subtraktion von Vektoren folgt, dass ein Vektor $\vec{v}$, welcher in $w_0$ beginnt und in $w_z$ endet, gleich $\vec{v}=w_z-w_0$ ist.
+Jeder Punkt in einem Koordinatensystem lässt sich durch einen Vektor beginnend im Ursprung und endend in diesem Punkt beschreiben. Komplexe Zahlen in ihrer geometrischer Darstellung werden genauso addieren und subtrahieren wie Vektoren und aus den Regeln der Subtraktion von Vektoren folgt, dass ein Vektor $\vec{v}$, welcher in $w_0$ beginnt und in $w_z$ endet, gleich $\vec{v}=w_z-w_0$ ist.
 $w_0$ hat die Koordinaten (1,0).
 Damit ist die Länge des Vektors, und somit der Strecke, welcher $w_0$ und $w_z$ verbindet gleich $|\vec{v}| = w_z - 1$.
 
 In der Aufgabenstellung wird nach dem Produkt aller Verbindungsstrecken gefragt.
-Damit ist dieses Produkt, welches wir nun $X$ nennen, gleich
+Dieses Produkt, welches wir nun $X$ nennen, ist demnach gleich
 \[X = |(w_1-1)|\times|(w_2-1)|\times\dots\times|(w_{n-1}-1)|\]
-Jeder Faktor dieses Produkts ist der Betrag der jeweiligen Klammer, was bedeutet, dass man in jeder Klammer statt $(w_z-1)$ auch $(1-w_z)$ schreiben kann, ohne den Betrag zu verändern.
+Jeder Faktor dieses Produkts ist der Betrag der jeweiligen Klammer, da die Längen der Strecken nur positive Werte annehmen können.
+Das bedeutet aber auch, dass man in jeder Klammer statt $(w_z-1)$ auch $(1-w_z)$ schreiben kann, ohne den Betrag zu verändern.
 Das gesamte Produkt ist dann gleich 
-\[X=|(1-w_1)|\times|(1-w_2)|\times\dots|(1-w_{n-1})|\]
+\[X=|(1-w_1)|\times|(1-w_2)|\times\dots\times|(1-w_{n-1})|\]
 Nach den Regeln der Multiplikation von Beträgen ist das Produkt der Beträge von Faktoren gleich dem Betrag des Proddukts dieser Faktoren. Also gilt
 \begin{equation}\label{X}
 	X=|(1-w_1)\times(1-w_2)\times\dots(1-w_{n-1})|
 \end{equation}
 
 An dieser Stelle lasst uns den Term, welcher sich innerhalb der Betragsstriche in $X$ liegt ansehen.
-Nennen wir diesen Term $H$, so ist $X=|H|$ und
+Nennen wir diesen Term $H$. Damit ist $X=|H|$ und
 \begin{equation}\label{H}
-	H=(1-w_1)\times(1-w_2)\times\dots(1-w_n-1)
+	H=(1-w_1)\times(1-w_2)\times\dots(1-w_{n-1})
 \end{equation}
 
-Erinnern wir uns, dass die Eckpunkte des Vielecks auch als Wurzel der Gleichung $z^n-1=0$ dargestellt werden können. Die erweiterte Fassung des Fundamentalsatzes der Algebra (\ref{eq:funda2}) besagt nun, dass
+Erinnern wir uns, dass die Eckpunkte des Vielecks auf dem Einheitskreis auch als Lösungen der Gleichung $z^n=1$ beziehungsweise $z^n-1=0$ dargestellt werden können. Die erweiterte Fassung des Fundamentalsatzes der Algebra (\ref{eq:funda2}) besagt nun, dass
 \[z^n-1=(z-w_0)\times(z-w_1)\times(z-w_2)\times\dots(z-w_{n-1})\]
 da $w_0=1$ ist, folgt
 \[z^n-1=(z-1)\times(z-w_1)\times(z-w_2)\times\dots(z-w_{n-1})\]
 Diese Gleichung ist nahezu identisch mit $H$ bei $z=1$.
-Der einzige Unterschied ist der Faktor $z-1$, welcher bei $H$ fehlt.
+Der einzige Unterschied ist der Faktor $(z-1)$, welcher bei $H$ fehlt.
 Möchten wir nun unsere Gleichung ohne diesen Faktor berechnen, so müssen wir sie durch $(z-1)$ teilen und es entsteht
 \begin{equation}\label{frac}
 	H=(z-w_1)\times(z-w_2)\times\dots(z-w_{n-1})=\frac{z^n-1}{z-1}
@@ -336,7 +340,7 @@ Dass dies wahr ist lässt sich mithilfe der vollständigen Induktion zeigen.
 \begin{equation}
 	G_n=a+aq+aq^2+\dots+aq^n=a\frac{1-q^{n+1}}{1-q\hspace{6mm}}.
 \end{equation} 
-(Wir setzen $q\ne1$, lies: $q$ ungleich $1$,v voraus, da sonst die rechte Seite von [der obenstehenden Behauptung] keinen Sinn hätte.)
+(Wir setzen $q\ne1$, lies: $q$ ungleich $1$, voraus, da sonst die rechte Seite von [der obenstehenden Behauptung] keinen Sinn hätte.)
 
 Diese Behauptung ist für $n=1$ sicher gültig; denn dann besagt sie, daß [sic!]
 \[G_1=a+aq=\frac{a(1-q^2)}{1-q}=\frac{a(1+q)(1-q)}{1-q}=a(1+q).\]
@@ -344,14 +348,14 @@ Wenn wir nun annehmen, daß [sic!]
 \[G_r=a+aq+\dots+aq^r=a\frac{1-q^{r+1}}{1-q},\]
 dann finden wir als Folgerung daraus
 \begin{multline}
-	G-{r+1}=(a+aq+\dots+aq^r)+aq^{r+1}=G_r+aq^{r+1}=a\frac{1-q^{r+1}}{1-q\hspace{6mm}}+aq^{r+1}\\
+	G_{r+1}=(a+aq+\dots+aq^r)+aq^{r+1}=G_r+aq^{r+1}=a\frac{1-q^{r+1}}{1-q\hspace{6mm}}+aq^{r+1}\\
 	=a\frac{(1-q^{r+1})+q^{r+1}(1-q)}{1-q}=a\frac{1-q^{r+1}+q^{r+1}-q^{r+2}}{1-q}=a\frac{1-q^{r+2}}{1-q\hspace{6mm}}
 \end{multline}
-Dies ist aber gerade die Behauptung [, die wir beweisen,] für den Fall $n=r+1$. Damit ist der Beweis vollständig."(Zitat-Zeug)
+Dies ist aber gerade die Behauptung [, die wir beweisen wollen,] für den Fall $n=r+1$. Damit ist der Beweis vollständig."(Zitat-Zeug)
 
 Nun können wir $\frac{1-z^n}{1-z}$ als eine Geometrische Reihe aufschreiben.
 \[1\times\frac{1-z^n}{1-z\hspace{2mm}}=1+z+z^2+\dots+z^{n-1}\]
-Da $\frac{z^n-1}{z-1}=\frac{1-z^n}{1-z\hspace{1mm}}$ ist, gilt bei $z=1$
+bedenken wir, dass $\frac{z^n-1}{z-1}=\frac{1-z^n}{1-z\hspace{1mm}}$ ist, gilt bei $z=1$
 \[\frac{z^n-1}{z-1}=1+1+1^2+\dots+1^{n-1}=n\]
 da die $1$ in dieser geometrischen Reihe insgesamt $n$ mal vorkommt.
 
