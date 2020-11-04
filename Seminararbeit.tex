@@ -250,19 +250,39 @@ In dem Taylorpolynom von $e^{i\varphi}$ haben die Polynomglieder im Zähler ein 
 	\left(1-\frac{\varphi^2}{2!}+\frac{\varphi^4}{4!}-\frac{\varphi^6}{6!}+\dots\right)+i\times\left(\varphi-\frac{\varphi}{1!}+\frac{x\varphi^3}{3!}-\frac{\varphi^5}{5!}+\dots\right) =\\
 	\cos(\varphi) + i\times\sin(\varphi)=z
 \end{multline}
-Hierbei handelt es sich um die berühmte "{Eulersche Formel}", welche Besagt, dass
-\[e^{i\varphi}=\cos(\varphi)+i\times\sin(\varphi)\]
+Hierbei handelt es sich um die berühmte \emph{"{}Eulersche Formel"}, welche Besagt, dass
+\begin{equation} \label{euler}
+	e^{i\varphi}=\cos(\varphi)+i\times\sin(\varphi)
+\end{equation}
 Daraus folgt, dass komplexe Zahlen auf dem Einheitskreis durch den Term $e^{i\varphi}$ dargestellt werden können. Für andere komplexe Zahlen muss noch der Abstand $l$ vom Ursprung bedacht werden und für sie gilt
 \[z=l\times e^{i\varphi}\]
 
 
 
+
+Diese Darstellung von komplexen Zahlen hat ihre berühmteste Anwendung in der sogenannten \emph{eulerschen Identität}.
+Wird nämlich in die eulersche Formel \eqref{euler} als Winkel $\varphi=\pi$ eingesetzt, so hat dieser Ausdruck einen erstaunlich simplen Wert.
+Der Kosinus hat beim Winkel $\pi$ den Wert $0$ und der Sinus den Wert $-1$.
+Dadurch entsteht die Formel
+\[e^{i\pi}+1=0\]
+welche von den meisten Mathematikern als einzigartig angesehen wird.
+Das Herausragende an ihr ist, dass sie "{}einen verblüffend einfachen Zusammenhalt zwischen vier der bedeutendsten mathematischen Konstanten herstellt:
+Der Eulerschen Zahl $e$, der imaginären Einheit $i$, der Kreiszahl $\pi$ sowie der Einheit $1$ der reellen Zahlen." (Zitat)
+Der eulerschen Identität wird oftmals der Titel "{}schönste Formel der Mathematik" zugeschrieben und die Eleganz, mit der sie die wichtigsten Konstanten aus den verschiedenen Teilbereichen der Mathematik verbindet, wird somit wertgeschätzt.\\
+
+
+
+
+
+
 %e hoch i pi + 1 = 0
 
-
-
-Sind komplexe Zahlen in dieser Form geschrieben, so ist offensichtlich, dass Multiplikation von komplexen Zahlen durch eine Multiplikation der Längen und Addition der Winkel erreicht wird
+Komplexe Zahlen, in ihrer Potenzform geschrieben, können eine Vielzahl von Problemen stark vereinfachen.
+So wird zum Beispiel die Multiplikation von komplexen Zahlen viel anschaulicher, wenn man diese Darstellung benutzt.
+Auf recht einfache Weise entsteht somit der Zusammenhang
 \[z_1\times z_2=(l_1 \times e^{i\varphi_1}) \times (l_2 \times e^{i\varphi_2})=l_1 l_2 \times e^{i(\varphi_1+\varphi_2)}\]
+welcher es offensichtlich macht, dass Multiplikation von komplexen Zahlen durch eine Multiplikation der Längen und Addition der Winkel dieser Zahlen erreicht wird.
+
 Im Fall von Potenzieren von komplexen Zahlen gilt nach den Regeln der Multiplikation dann
 \[z^n=l^n \times e^{i(n\varphi)}\]
 
