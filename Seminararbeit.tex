@@ -322,8 +322,14 @@ Nun soll die Nützlichkeit der komplexen Zahlen an einer Aufgabe demonstriert we
 
 \noindent \textit{In einen Einheitskreis wird ein regelmäßiges $n$-Eck eingezeichnet, sodass alle Ecken auf der Kreislinie liegen.
 Eine der Ecken wird mit jeweils jeder anderen Ecke durch Strecken verbunden.
-Was ist das Produkt der Längen dieser Strecken?}
+Was ist das Produkt der Längen dieser Strecken?}\\
 
+
+Aus dem Abschnitt (4...) kennen wir Kreisteilungsgleichungen. Diese benötigt man zum Lösen der Aufgabe. Zuallererst jedoch muss die komplexe Zahlenebene festgelegt werden. 
+
+Setzen wir den Ursprung unseres Koordinatensystems in den Mittelpunkt des Kreises und richten es so aus, dass die Achse der Realanteile durch eine der Ecken durchläuft sodass diese Ecke nun die Koordinaten $(1,0)$ hat.
+Jene Ecke nennen wir $w_0$ und von dieser Ecke aus werden wir auch später die Linien zu den anderen Ecken ziehen.
+Unser Vieleck sieht nun folgendermaßen aus:
 
 
 \definecolor{zzttqq}{rgb}{0.6,0.2,0}
@@ -344,7 +350,7 @@ Was ist das Produkt der Längen dieser Strecken?}
 		xtick={-2,-1.5,...,2},
 		ytick={-2,-1.5,...,2},
 		ytick pos=right,
-		yticklabel={\SI[round-mode=places, round-precision=1]{\tick}{i}}
+		yticklabel={\SI[round-mode=places, round-precision=1]{\tick}{}}
 		]
 		\clip(-2.038767629087051,-1.7478947202599961) rectangle (1.7928535328621873,1.7464358464472318);
 		\fill[line width=3.2pt,color=zzttqq,fill=zzttqq,fill opacity=0.2] (1,0) -- (0.6234898018587336,0.7818314824680298) -- (-0.2225209339563141,0.9749279121818236) -- (-0.9009688679024188,0.4338837391175584) -- (-0.9009688679024189,-0.43388373911755773) -- (-0.22252093395631456,-0.9749279121818234) -- (0.6234898018587333,-0.7818314824680298) -- cycle;
@@ -364,7 +370,7 @@ Was ist das Produkt der Längen dieser Strecken?}
 		\draw [line width=2pt] (1,0)-- (0.6234898018587333,-0.7818314824680298);
 		\begin{scriptsize}
 			\draw [fill=uuuuuu] (1,0) circle (2pt);
-			\draw[color=uuuuuu] (1.2,0.10) node {\Large $\omega_0$};
+			\draw[color=uuuuuu] (1.15,0.10) node {\Large $\omega_0$};
 			\draw [fill=uuuuuu] (0.6234898018587336,0.7818314824680298) circle (2pt);
 			\draw[color=uuuuuu] (0.8,0.9) node {\Large $\omega_1$};
 			\draw [fill=uuuuuu] (-0.2225209339563141,0.9749279121818236) circle (2pt);
@@ -387,10 +393,6 @@ Was ist das Produkt der Längen dieser Strecken?}
 
 
 
-Aus dem Abschnitt (4...) kennen wir Kreisteilungsgleichungen. Diese benötigt man zum Lösen der Aufgabe. Zuallererst jedoch muss die komplexe Zahlenebene festgelegt werden. 
-
-Setzen wir den Ursprung unsres Koordinatensystems in den Mittelpunkt des Kreises und richten es so aus, dass die Achse der Realanteile durch eine der Ecken durchläuft sodass diese Ecke nun die Koordinaten $(1,0)$ hat.
-Jene Ecke nennen wir $w_0$ und von dieser Ecke aus werden wir auch später die Linien zu den anderen Ecken ziehen.\\
 
 Wenn wir nun alle Ecken als komplexe Zahlen ansehen, so können wir die Kreisteilungsgleichungen verwenden und kommen zum Schluss, dass
 \begin{equation}
