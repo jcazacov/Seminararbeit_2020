@@ -75,9 +75,12 @@
 
 \newpage
 
+%\renewcommand{\contentsname}{Gliederung}	% Überschrift des Inhaltsverzeichnisses
+
 \tableofcontents
 
 \newpage
+
 
 \section{Einleitung}
 
@@ -283,13 +286,13 @@ Dadurch entsteht die Formel
 welche von den meisten Mathematikern als einzigartig angesehen wird.
 Das Herausragende an ihr ist, dass sie "{}einen verblüffend einfachen Zusammenhalt zwischen vier der bedeutendsten mathematischen Konstanten herstellt:
 Der Eulerschen Zahl $e$, der imaginären Einheit $i$, der Kreiszahl $\pi$ sowie der Einheit $1$ der reellen Zahlen." (Zitat)
-Der eulerschen Identität wird oftmals der Titel "{}schönste Formel der Mathematik" zugeschrieben und die Eleganz, mit der sie die wichtigsten Konstanten aus den verschiedenen Teilbereichen der Mathematik verbindet, wird somit wertgeschätzt.\\
+Der eulerschen Identität wird oftmals der Titel "{}schönste Formel der Mathematik"{} zugeschrieben und die Eleganz, mit der sie die wichtigsten Konstanten aus den verschiedenen Teilbereichen der Mathematik verbindet ist hoch geschätzt.\\
 
 
 
 
 Komplexe Zahlen, in ihrer Potenzform geschrieben, können eine Vielzahl von Problemen stark vereinfachen.
-So wird zum Beispiel die Multiplikation von komplexen Zahlen viel anschaulicher, wenn man diese Darstellung benutzt.
+So wird zum Beispiel die Multiplikation von komplexen Zahlen viel anschaulicher, wenn diese Darstellung benutzt wird.
 Auf recht einfache Weise entsteht somit der Zusammenhang
 \[z_1\times z_2=(l_1 \times e^{i\varphi_1}) \times (l_2 \times e^{i\varphi_2})=l_1 l_2 \times e^{i(\varphi_1+\varphi_2)}\]
 welcher es offensichtlich macht, dass Multiplikation von komplexen Zahlen durch eine Multiplikation der Längen und Addition der Winkel dieser Zahlen erreicht wird.
@@ -299,26 +302,35 @@ Im Fall von Potenzieren von komplexen Zahlen gilt nach den Regeln der Multiplika
 
 Einen sehr anschaulichen Effekt hat diese Formel nun wenn wir versuchen ihre geometrische Bedeutung zu Interpretieren.
 Sie kann nämlich als die Formel für die Lösungen einer Gleichung der Form $z^n=h$ gesehen werden.
-Setzen wir als $h=1$ ein, so erhalten wir eine Kreisteilungsgleichung $z^n=1$. Wir bestimmen in diesem Fall die $n$-te Wurzel aus $1$.
-Benutzen wir nun die Formel $l^n \times e^{i(n\varphi)}=1$, entspricht $l$ für jedes $z$ gleich $l=1$, da $l^n=1$ gilt und $l$ nur positive Werte annehmen kann.
+Setzen wir als $h=1$ ein, so erhalten wir eine Kreisteilungsgleichung $z^n=1$. Wir bestimmen somit in diesem Fall die $n$-te Wurzel aus $1$.
+Benutzen wir nun die Formel $l^n \times e^{i(n\varphi)}=1$, entspricht $l$ für jedes $z$ gleich $l=1$, da $l^n=1$ gilt und $l$ nur positive Werte annehmen kann.\\
 
 für den Wert des Winkels $\varphi$ gibt es jedoch mehrere Möglichkeiten.
-Damit $e^{in\varphi}$ gleich $1$ ist, muss die Polarform des Terms als Winkel $0$ oder ein Vielfaches von $2\pi$ haben.
-Dadurch fällt der Winkel multipliziert mit $n$ wieder zurück auf die Realachse zum Punkt $(1,0)$.
+Damit $e^{i(n\varphi)}$ gleich $1$ ist, muss die geometrische Darstellung des Terms als Winkel $0$ oder ein Vielfaches von $2\pi$ haben.
+Nur wenn dies gilt fällt der Winkel multipliziert mit $n$ wieder zurück auf die Realachse zum Punkt $(1,0)$.
 Es lässt sich leicht zeigen, dass es auf dem Einheitskreis genau $n$ solche Punkte gibt, welche beide Bedingungen für Länge und Winkel erfüllen.
-Wenn wir nämlich den ersten solchen Punkt $z_1$ ansehen, so hat er als $\varphi=\frac{2\pi}{n}$, um nach $n$ Multiplikationen mit sich selbst nach einer Umdrehung wieder in $1$ zu gelangen.
+Ein solcher Punkt ist $z_0=(1,0)$ selber, damit wäre der Winkel $\varphi_0=0$, aber dies ist ja selbstverständlich.
+Uns interessieren viel mehr die Punkte, welche komplexe Zahlen sind.
+Der erste solche Punkt $z_1$, hat als $\varphi_1=\frac{2\pi}{n}$, da er durch $n$ Multiplikationen mit sich selbst nach einer Umdrehung wieder in $(1, 0)$ gelangen muss.
 Nehmen wir für den nächsten Punkt $z_2$ den doppelten Winkel, so landet der Punkt nach dem Potenzieren mit $n$ mit insgesamt zwei Umdrehungen auf der $1$.
-Der Fundamentalsatz der Algebra besagt, dass es $n$ Lösungen für die Gleichung $e^{i(n\varphi)}=1$ gibt und wenn man dem obengenannten Verfahren weiter folgt, schließt sich, dass diese Lösungen in ihrer geometrischer Form in gleichmäßigen Abständen als Punkte auf dem Einheitskreis platziert sind.
+Dieses Verfahren lässt sich insgesamt $n-1$ mal anwenden, um neue Pinkte zu bekommen.
+Versuchen wir nämlich weitere mögliche Winkel aus dem ersten Winkel $\varphi_1$ zu bilden, so müssen wir den Winkel $\varphi_1$ mit $n$ multiplizieren.
+Nun ist aber $\varphi_1 \times n =\frac{2\pi}{n}\times n = 2\pi$, also eine ganze Umdrehung.
+Damit ist dieser Punkt $z_n=(1,0)$ und würde nur den Punkt $z_0$ beschreiben.
+Weiteres Addieren von $\varphi_1$ gibt auch keine neuen Wurzeln aus 1, da sie schon vorhandenen Punkten gleichen würden.\\
+
+
+Es liegen also $n$ verschiedene Punkte auf der Gaußschen Zahlenebene vor, die als $n$-te Wurzeln aus 1 gesehen werden können.
+Da die Winkel aller dieser Punkte Vielfache eines ersten Winkels $\varphi_1$ sind, lässt sich schließen, dass diese Lösungen in ihrer geometrischer Form in gleichmäßigen Abständen als Punkte auf dem Einheitskreis platziert sind.
 Sie bilden somit die Ecken eines regelmäßigen Vielecks, welches als eine Ecke den Punkt $(1,0)$ hat.
 Damit ist die graphische Darstellung beliebiger Wurzeln aus $1$ gefunden.
 
 
 
 
-
 \section{Beispiel der Anwendung}
 
-Nun soll die Nützlichkeit der komplexen Zahlen an einer Aufgabe demonstriert werden, welche auf den Ersten Blick sich gar nicht mit Algebra lösen lässt, da sie aus der Geometrie stammt. Dieses Problem ist sehr einfach formuliert, und könnte noch aus der Antike stammen, als große Mathematik mit Stöcken in Sand gezeichnet wurde. Die Aufgabe Lautet:\\
+Nun soll die Nützlichkeit der komplexen Zahlen an einer Aufgabe demonstriert werden, welche auf den Ersten Blick sich gar nicht mit Algebra lösen lässt, da sie aus der Geometrie stammt. Dieses Problem ist sehr einfach formuliert, und könnte noch aus der Antike stammen, als große Mathematik mit Stöcken in Sand gezeichnet wurde. Die Aufgabe lautet:\\
 
 \noindent \textit{In einen Einheitskreis wird ein regelmäßiges $n$-Eck eingezeichnet, sodass alle Ecken auf der Kreislinie liegen.
 Eine der Ecken wird mit jeweils jeder anderen Ecke durch Strecken verbunden.
@@ -327,10 +339,17 @@ Was ist das Produkt der Längen dieser Strecken?}\\
 
 Aus dem Abschnitt (4...) kennen wir Kreisteilungsgleichungen. Diese benötigt man zum Lösen der Aufgabe. Zuallererst jedoch muss die komplexe Zahlenebene festgelegt werden. 
 
-Setzen wir den Ursprung unseres Koordinatensystems in den Mittelpunkt des Kreises und richten es so aus, dass die Achse der Realanteile durch eine der Ecken durchläuft sodass diese Ecke nun die Koordinaten $(1,0)$ hat.
-Jene Ecke nennen wir $w_0$ und von dieser Ecke aus werden wir auch später die Linien zu den anderen Ecken ziehen.
+Setzen wir den Ursprung unseres Koordinatensystems in den Mittelpunkt des Kreises und richten es so aus, dass die Achse der Realteile durch eine der Ecken durchläuft.
+Jene Ecke mit den Koordinaten $(1,0)$ nennen wir $w_0$ und von dieser Ecke aus werden wir auch die Linien zu den anderen Ecken ziehen.
+Wenn wir nun alle Ecken als komplexe Zahlen ansehen, so können wir die Kreisteilungsgleichungen verwenden und kommen zum Schluss, dass
+\begin{equation}
+	z^n=1
+\end{equation}
+wobei $z$ eine $n$-te Wurzel von $1$ ist und somit auch ein Eckpunkt unseres $n$-Ecks.
+Diese restlichen Ecken nennen wir nun $w_1$, $w_2$,$\dots$,$w_{n-1}$, dabei ist $w_n = w_0 = 1$.
 Unser Vieleck sieht nun folgendermaßen aus:
 
+\begin{center}
 
 \definecolor{zzttqq}{rgb}{0.6,0.2,0}
 \definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
@@ -387,33 +406,21 @@ Unser Vieleck sieht nun folgendermaßen aus:
 	\end{axis}
 \end{tikzpicture}
 
+\end{center}
 
-
-
-
-
-
-
-Wenn wir nun alle Ecken als komplexe Zahlen ansehen, so können wir die Kreisteilungsgleichungen verwenden und kommen zum Schluss, dass
-\begin{equation}
-	z^n=1
-\end{equation}
-
-wobei $z$ eine $n$-te Wurzel von $1$ ist und somit auch ein Eckpunkt unseres $n$-Ecks.
-Diese restlichen Ecken nennen wir nun $w_1$, $w_2$,$\dots$,$w_{n-1}$, dabei ist $w_n = w_0 = 1$.\\ 
 
 Jeder Punkt in einem Koordinatensystem lässt sich durch einen Vektor beginnend im Ursprung und endend in diesem Punkt beschreiben. Komplexe Zahlen in ihrer geometrischer Darstellung werden genauso addieren und subtrahieren wie Vektoren und aus den Regeln der Subtraktion von Vektoren folgt, dass ein Vektor $\vec{v}$, welcher in $w_0$ beginnt und in $w_z$ endet, gleich $\vec{v}=w_z-w_0$ ist.
 $w_0$ hat die Koordinaten (1,0).
 Damit ist die Länge des Vektors, und somit der Strecke, welcher $w_0$ und $w_z$ verbindet gleich $|\vec{v}| = w_z - 1$.
 
-In der Aufgabenstellung wird nach dem Produkt aller Verbindungsstrecken gefragt.
+In der Aufgabenstellung wird nach dem Produkt aller solcher Verbindungsstrecken gefragt.
 Dieses Produkt, welches wir nun $X$ nennen, ist demnach gleich
 \[X = |(w_1-1)|\times|(w_2-1)|\times\dots\times|(w_{n-1}-1)|\]
 Jeder Faktor dieses Produkts ist der Betrag der jeweiligen Klammer, da die Längen der Strecken nur positive Werte annehmen können.
 Das bedeutet aber auch, dass man in jeder Klammer statt $(w_z-1)$ auch $(1-w_z)$ schreiben kann, ohne den Betrag zu verändern.
-Das gesamte Produkt ist dann gleich 
+Das gesamte Produkt entspricht dann
 \[X=|(1-w_1)|\times|(1-w_2)|\times\dots\times|(1-w_{n-1})|\]
-Nach den Regeln der Multiplikation von Beträgen ist das Produkt der Beträge von Faktoren gleich dem Betrag des Proddukts dieser Faktoren. Also gilt
+Nach den Regeln der Multiplikation von Beträgen ist das Produkt der Beträge von Faktoren gleich dem Betrag des Produkts dieser Faktoren. Damit gilt
 \begin{equation}\label{X}
 	X=|(1-w_1)\times(1-w_2)\times\dots(1-w_{n-1})|
 \end{equation}
@@ -424,7 +431,7 @@ Nennen wir diesen Term $H$. Damit ist $X=|H|$ und
 	H=(1-w_1)\times(1-w_2)\times\dots(1-w_{n-1})
 \end{equation}
 
-Erinnern wir uns, dass die Eckpunkte des Vielecks auf dem Einheitskreis auch als Lösungen der Gleichung $z^n=1$ beziehungsweise $z^n-1=0$ dargestellt werden können. Die erweiterte Fassung des Fundamentalsatzes der Algebra (\ref{eq:funda2}) besagt nun, dass
+Erinnern wir uns, dass die Eckpunkte des Vielecks auf dem Einheitskreis auch als Lösungen der Gleichung $z^n=1$ beziehungsweise $z^n-1=0$ dargestellt werden konnten. Die erweiterte Fassung des Fundamentalsatzes der Algebra (\ref{eq:funda2}) besagt nun, dass %nicht ganz Fundamentalsatz, sondern Faktorzerlegung
 \[z^n-1=(z-w_0)\times(z-w_1)\times(z-w_2)\times\dots(z-w_{n-1})\]
 da $w_0=1$ ist, folgt
 \[z^n-1=(z-1)\times(z-w_1)\times(z-w_2)\times\dots(z-w_{n-1})\]
@@ -439,7 +446,7 @@ bei $z=1$. Dies kann auch aufgeschrieben werden als
 Da wir versuchen, diese Gleichung bei $z=1$ zu lösen, müssen wir über einen Umweg gehen, ansonsten würde bei einem direkten Einsetzen der Nenner gleich $0$ sein.
 Dabei fällt auf, dass $\frac{1-z^n}{1-z\hspace{1mm}}$ die Zusammenfassung einer geometrischen Reihe ist.
 (Eine Geometrische Reihe $G_n$ ist ein Term der Form $a+aq+aq^2+\dots+aq^n$.)
-Dass dies wahr ist lässt sich mithilfe der vollständigen Induktion zeigen.
+Dass dies wahr ist lässt sich mithilfe einiger unkomplizierter Überlegungen zeigen.
 
 "Wir werden beweisen, daß [sic!] für jeden Wert von $n$ [$\dots$]
 \begin{equation}
@@ -459,10 +466,11 @@ dann finden wir als Folgerung daraus
 Dies ist aber gerade die Behauptung [, die wir beweisen wollen,] für den Fall $n=r+1$. Damit ist der Beweis vollständig."(Zitat-Zeug)
 
 Nun können wir $\frac{1-z^n}{1-z}$ als eine Geometrische Reihe aufschreiben.
-\[1\times\frac{1-z^n}{1-z\hspace{2mm}}=1+z+z^2+\dots+z^{n-1}\]
+\[1\times\frac{1-z^n}{1-z\hspace{2mm}}=1+z+z^2+z^3+\dots+z^{n-1}\]
 bedenken wir, dass $\frac{z^n-1}{z-1}=\frac{1-z^n}{1-z\hspace{1mm}}$ ist, gilt bei $z=1$
-\[\frac{z^n-1}{z-1}=1+1+1^2+\dots+1^{n-1}=n\]
-da die $1$ in dieser geometrischen Reihe insgesamt $n$ mal vorkommt.
+\[\frac{z^n-1}{z-1}=1+1+1^2+1^3+\dots+1^{n-1}=n\]
+da die $1$ in dieser geometrischen Reihe insgesamt $n$ mal als Summand vorliegt.
+Hier muss man anmerken, dass $n$ positiv sein muss, da es die Anzahl der Ecken im Vieleck beschreibt und Anzahlen nur natürliche Zahlen sein können.
 
 
 
