@@ -139,7 +139,7 @@ Der Fundamentalsatz der Algebra wird manchmal auch in einer leicht verschiedenen
 
 Für den Beweis dieser zweiten Fassung des Fundamentalsatzes muss zuerst ein beliebiges Polynom $f(x)$ der $n$-ten Ordnung durch den Term $(x-a)$ geteilt werden.
 \begin{equation}\label{eq:bezout1}
-f(x) = (x - a) \times q(x) + r(x)
+f(x) = (x - a) \cdot q(x) + r(x)
 \end{equation} 
 Dabei ist $a$ eine beliebige Zahl, $q(x)$ das entstehende Polynom der Ordnung $n-1$ und $r(x)$ der Rest, der aus dieser Teilung hervorgeht.
 Da $f(x)$ durch ein Polynom ersten Grades geteilt wird, muss der Grad dieses Restes $r(x)$ kleiner als $1$ sein und $r(x)$ ist somit eine Konstante.
@@ -204,7 +204,7 @@ Sie sind zweifellos die Grundlage für viele Teilbereiche der Mathematik.
 \footnote{Vgl. Pieper, Herbert; Die komplexen Zahlen, Berlin $1991^3$, S. 199}
 
 
-\section{Kreisteilungsgleichungen}
+\section{Eulersche Formel}
 
 Die komplexen Zahlen sind jedoch nicht nur zur Lösung von Polynomen verwendbar, sondern werden auch bei Aufgaben benutzt, die auf den ersten Blick gar nicht mit traditioneller Algebra verbunden sind.
 Um diese Aspekte zu erkennen, müssen wir jedoch zuerst ihre geometrische Darstellung betrachten.\\
@@ -218,10 +218,10 @@ Die reellen Zahlen sind offensichtliche ein Spezialfall der komplexen Zahlen, n�
 Damit kann der Wert einer reellen Zahl als der Realteil einer komplexen Zahl $z$ mit $Im(z)=0$ angesehen werden.
 Da alle reelle Zahlen als Punkte auf einer Zahlengerade visualisiert werden und $\mathbb{R}$ eine Teilmenge von $\mathbb{C}$ ist, muss auch in der geometrischen Form der komplexen Zahlen die reelle Zahlengerade vorhanden sein.
 Der Imaginärteil wird dagegen in der vollkommen verschiedenen imaginären Einheit $i$ angegeben und lässt sich somit nicht auf dieser Zahlengerade darstellen.
-Um diese beiden Bedingungen zu erfüllen wurde eine elegante Lösung gefunden\\
+Um diese beiden Bedingungen zu erfüllen wurde eine elegante Lösung gefunden:\\
 
 
-\emph{Bei der komplexen Zahlenebene, auch Gaußsche Zahlenebene genannt, handelt es sich um ein kartesisches Koordinatensystem mit einer Achse, welche die Größe des Realteils $Re(z)$ der komplexen Zahl angibt, und der zweiten Achse für den Imaginärteil $Im(z)$. Jede komplexe Zahl wird als Punkt in dieser Ebene veranschaulicht.\footnote{Vgl. Schmidt, Harald: Elementare Technomathematik, Amberg $2018$, S. $286$}}\\
+\noindent \emph{Bei der komplexen Zahlenebene, auch Gaußsche Zahlenebene genannt, handelt es sich um ein kartesisches Koordinatensystem mit einer Achse, welche die Größe des Realteils $Re(z)$ der komplexen Zahl angibt, und der zweiten Achse für den Imaginärteil $Im(z)$. Jede komplexe Zahl wird als Punkt in dieser Ebene veranschaulicht.\footnote{Vgl. Schmidt, Harald: Elementare Technomathematik, Amberg $2018$, S. $286$}}\\
 
 
 Somit ist die Realachse gleichzeitig auch die Zahlengerade von $\mathbb{R}$, da für jeden Punkt auf ihr gilt $Im(z)=0$.\\
@@ -230,7 +230,8 @@ Somit ist die Realachse gleichzeitig auch die Zahlengerade von $\mathbb{R}$, da 
 
 Wir können nun komplexe Zahlen als Punkte in einem Koordinatensystem betrachten.
 Statt der klassischen Angabe der Position mit zwei Werten, einen für jede Achse, kann jeder Punkt auch durch seine Polarkoordinaten definiert werden.
-Dabei wird von einem Vektor, der im Ursprung beginnt und an dem zu beschreibenden Punkt endet, dessen Winkel $\varphi$ zur Realachse und die Länge dieses Vektors $r$ angegeben. Diese Länge $r$ wird der Betrag $r=|z|$ der komplexen Zahl genannt.
+Dabei wird von einem Vektor, der im Ursprung beginnt und an dem zu beschreibenden Punkt endet, dessen Winkel $\varphi$ zur Realachse und die Länge dieses Vektors $r$ angegeben. Diese Länge $r$ wird der Betrag $r=|z|$ der komplexen Zahl $z$ genannt.
+
 In einem solchen Fall wäre bei der Realteil der Zahl gleich $Re(z)=r\times\cos(\varphi)$ und der Imaginärteil $Im(z)=r\times\sin(\varphi)$.
 Jede komplexe Zahl ist also gleich $z=r\times(\cos(\varphi)+i\sin(\varphi))$
 \footnote{Ansorge, Rainer; Oberle, Hans Joachim; Rothe, Kai; Sonar, Thomas, Mathematik für Ingenieure, Hamburg $2010^4$ S.$35$}
@@ -245,16 +246,18 @@ Jede komplexe Zahl ist also gleich $z=r\times(\cos(\varphi)+i\sin(\varphi))$
 			axis lines=middle,
 			ymajorgrids=true,
 			xmajorgrids=true,
+			xlabel={$Re(z)$},
+			ylabel={$Im(z)$},
 			scale=1.5,
 			xmin=-1.5,
 			xmax=4.5,
 			ymin=-1.5,
-			ymax=4.5,
+			ymax=3.5,
 			xtick={-1,0,...,4},
-			ytick={-1,0,...,4},]
+			ytick={-1,0,...,3},]
 			\clip(-5.333670383259202,-8.150552521109908) rectangle (11.738093543694342,6.020399486548278);
 			\draw [shift={(0,0)},line width=2pt,color=qqwuqq,fill=qqwuqq,fill opacity=0.10000000149011612] (-1.5,-1.5) -- (-100:1.52) arc (0:42:0.9715638007209334) -- cycle;
-			\draw [line width=2.4pt] (0,0)-- (3,2);
+			\draw [->,line width=2.4pt] (0,0)-- (3,2);
 			\draw [line width=1.6pt,dash pattern=on 1pt off 4pt] (0,2)-- (3,2);
 			\draw [line width=1.6pt,dash pattern=on 1pt off 4pt] (3,2)-- (3,0);
 			\begin{scriptsize}
@@ -334,6 +337,9 @@ Der Eulerschen Zahl $e$, der imaginären Einheit $i$, der Kreiszahl $\pi$ sowie 
 \footnote{Engel, Joachim; Fest, Andreas: Komplexe Zahlen und ebene Geometrie, Ludwigsburg $2015^3$, S. $32$}
 Der eulerschen Identität wird oftmals der Titel "{}schönste Formel der Mathematik"{} zugeschrieben und die Eleganz, mit der sie die wichtigsten Konstanten aus den verschiedenen Teilbereichen der Mathematik verbindet ist hoch geschätzt.\\
 
+
+
+\section{Kreisteilungsgleichungen}
 
 
 
