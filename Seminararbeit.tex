@@ -144,8 +144,8 @@ f(x) = (x - a) \cdot q(x) + r(x)
 Dabei ist $a$ eine beliebige Zahl, $q(x)$ das entstehende Polynom der Ordnung $n-1$ und $r(x)$ der Rest, der aus dieser Teilung hervorgeht.
 Da $f(x)$ durch ein Polynom ersten Grades geteilt wird, muss der Grad dieses Restes $r(x)$ kleiner als $1$ sein und $r(x)$ ist somit eine Konstante.
 Setzt man nun in die obenstehende Gleichung \eqref{eq:bezout1} ein $x=a$, dann folgt:
-\[ f(a) = (a-a) \times q(a) + r(a) \]
-Und da $(a - a) \times q(a) = 0 \times q(a) = 0 $ ist gilt:
+\[ f(a) = (a-a) \cdot q(a) + r(a) \]
+Und da $(a - a) \cdot q(a) = 0 \cdot q(a) = 0 $ ist gilt:
 \[ f(a) = r(a) \]
 In Worten ausgedrückt:
 
@@ -161,16 +161,16 @@ r(x_0) = f(x_0)=0
 \end{equation}
 
 
-\noindent \emph{Ist $x_0$ eine Nullstelle des Polynom $f(x)$, so lässt sich $f(x)$ durch das lineare Polynom $(x-x_0)$ restlos teilen.\footnote{Ansorge, Rainer; Oberle, Hans Joachim; Rothe, Kai; Sonar, Thomas, Mathematik für Ingenieure, Hamburg $2010^4$ S.$41$}}
+\noindent \emph{Ist $x_0$ eine Nullstelle des Polynom $f(x)$, so lässt sich $f(x)$ durch das lineare Polynom $(x-x_0)$ restlos teilen.\footnote{Ansorge, Rainer; Oberle, Hans Joachim; Rothe, Kai; Sonar, Thomas, Mathematik für Ingenieure, Hamburg $2010^4$ S.$41$}}\\
 
 
 %\noindent \emph{Demnach lässt sich ein beliebiges Polynom f(x) durch ein lineares Polynom $(x-x_0)$ mit $x_0$ als eine Nullstelle restlos teilen.}\\
 
 Wenn nun ein Polynom $f(x)$ des $n$-ten Grades vorliegt, so besagt die erste Fassung des Fundamentalsatzes der Algebra \eqref{eq:funda}, dass eine Nullstelle $x_0$ existiert. Folglich lässt sich nun unser $f(x)$ mithilfe des "Little Bézout's theorem" {}umformen zu
-\[f(x)=(x-x_0) \times g(x)\]
+\[f(x)=(x-x_0) \cdot g(x)\]
 wobei sich f(x) restlos durch $(x-x_0)$ teilt und $g(x)$ ein Polynom der Ordnung $n-1$ ist.
 Dieses $g(x)$ hat jedoch nach dem Fundamentalsatz auch eine Nullstelle $x_1$.
-Es lässt sich durch $(x-x_1)$ restlos teilen und damit folgt $f(x) = (x-x_0) \times (x-x_1) \times h(x)$.
+Es lässt sich durch $(x-x_1)$ restlos teilen und damit folgt $f(x) = (x-x_0) \cdot (x-x_1) \cdot h(x)$.
 Dieselbe Überlegungen können bei $h(x)$ angewandt werden und so weiter, wobei der Grad der Funktion in Term bei jedem Schritt sich um $1$ verkleinert.
 Insgesamt lässt sich diese Methode auf dem Polynom $n$ mal verwenden und es teilt sich ohne Rest in $n$ Faktoren auf.\footnote{Vgl. Schmidt, Harald: Elementare Technomathematik, Amberg $2018$, S. $322$}\\
 
@@ -230,11 +230,14 @@ Somit ist die Realachse gleichzeitig auch die Zahlengerade von $\mathbb{R}$, da 
 
 Wir können nun komplexe Zahlen als Punkte in einem Koordinatensystem betrachten.
 Statt der klassischen Angabe der Position mit zwei Werten, einen für jede Achse, kann jeder Punkt auch durch seine Polarkoordinaten definiert werden.
-Dabei wird von einem Vektor, der im Ursprung beginnt und an dem zu beschreibenden Punkt endet, dessen Winkel $\varphi$ zur Realachse und die Länge dieses Vektors $r$ angegeben. Diese Länge $r$ wird der Betrag $r=|z|$ der komplexen Zahl $z$ genannt.
+Dabei wird von einem Vektor, der im Ursprung beginnt und an dem zu beschreibenden Punkt endet, dessen Winkel $\varphi$ zur Realachse und die Länge dieses Vektors $r$ angegeben. Diese Länge $r$ wird der Betrag $r=|z|$ der komplexen Zahl $z$ genannt.\footnote{Ansorge, Rainer; Oberle, Hans Joachim; Rothe, Kai; Sonar, Thomas, Mathematik für Ingenieure, Hamburg $2010^4$ S.$35$}
 
-In einem solchen Fall wäre bei der Realteil der Zahl gleich $Re(z)=r\times\cos(\varphi)$ und der Imaginärteil $Im(z)=r\times\sin(\varphi)$.
-Jede komplexe Zahl ist also gleich $z=r\times(\cos(\varphi)+i\sin(\varphi))$
-\footnote{Ansorge, Rainer; Oberle, Hans Joachim; Rothe, Kai; Sonar, Thomas, Mathematik für Ingenieure, Hamburg $2010^4$ S.$35$}
+In einem solchen Fall wäre bei der Realteil der Zahl gleich $Re(z)=r\cdot \cos(\varphi)$ und der Imaginärteil $Im(z)=r\cdot \sin(\varphi)$.
+Jede komplexe Zahl ist also gleich
+
+\begin{equation}\label{eq.trigon}
+	\boxed{z=r\cdot(\cos(\varphi)+i \sin(\varphi))}	
+\end{equation}
 
 \begin{center}
 	\definecolor{qqwuqq}{rgb}{0,0.39215686274509803,0}
@@ -266,8 +269,8 @@ Jede komplexe Zahl ist also gleich $z=r\times(\cos(\varphi)+i\sin(\varphi))$
 				\draw[color=ududff] (3.6,2.3) node {\large $z = (3, 2)$};
 				\draw[color=qqwuqq] (1.5,0.49636530530639955) node {\large $\varphi$};
 				\draw[color=black] (1.3,1.15) node {\large $r$};
-				\draw[color=black] (1.5,2.3) node {\large $r\times sin(\varphi)$};
-				\draw[color=black] (3.8,0.95) node {\large $r \times cos(\varphi)$};
+				\draw[color=black] (1.5,2.3) node {\large $r\cdot \sin(\varphi)$};
+				\draw[color=black] (3.8,0.95) node {\large $r \cdot \cos(\varphi)$};
 			\end{scriptsize}
 		\end{axis}
 	\end{tikzpicture}
@@ -281,61 +284,90 @@ Jede komplexe Zahl ist also gleich $z=r\times(\cos(\varphi)+i\sin(\varphi))$
 Betrachten wir nun den Sinus, beziehungsweise den Kosinus.
 Wollen wir sie mit anderen Funktionen vergleichen, so wäre es besser wenn sie in der Polynomform vorlägen, da mit dieser in der Algebra leicht umgegangen werden kann.
 Um dies zu erreichen benötigen wir das Taylorpolynom.
-Dieses Polynom ist perfekt dazu geeignet komplizierte Funktionen mit hoher Genauigkeit anzunähern.
+Dieses Polynom wird oft in der Physik verwendet, wie zum Beispiel in der Formel zu Berechnung der zurückgelegten Strecke bei gleichmäßig beschleunigter Bewegung. 
+
+\[s(t)=s_0+v\cdot t + \frac{1}{2}at^2=\frac{s(t_0)}{0!}+\frac{s\prime(t_0)}{1!}\cdot t +\frac{s\prime\prime(t_0)}{2!} \cdot t^2\]
+
+
+Das Taylorpolynom ist perfekt dazu geeignet komplizierte Funktionen mit hoher Genauigkeit anzunähern.
 Das Polynom lässt sich nur dann anwenden, wenn die anzunähernde Funktion sich zureichend oft ableiten lässt, am besten unbeschränkt oft.
 Für sowohl den Sinus als auch den Kosinus ist letzteres wahr.
-Bei wiederholter Ableitung laufen sie durch die Werte $\sin(x)$, $\cos(x)$, $-\sin(x)$ und $-\cos(x)$ unendlich oft durch.
+Bei wiederholter Ableitung laufen sie durch die Werte $\sin(x) \rightarrow \cos(x) \rightarrow -\sin(x) \rightarrow -\cos(x) \rightarrow \sin(x)$ unendlich oft durch.
 Das Taylorpolynom kann mit einer angegebenen Entwicklungsstelle $x_0$ den Wert jeder Funktion $f(x)$ an der Position $x$ durch die Formel
 \begin{equation}
-	T_n(x)=\frac{f(x_0)}{0!}\times(x-x_0)^0 + \frac{f^{(1)}(x_0)}{1!}\times(x-x_0)^1 +% \frac{f^{(2)}(x_0)}{2!}\times(x-x_0)^2 +
-	\dots +\frac{f^{(n)}(x_0)}{n!}\times(x-x_0)^n
+	T_n(x)=\frac{f(x_0)}{0!}\cdot(x-x_0)^0 + \frac{f^{(1)}(x_0)}{1!}\cdot(x-x_0)^1 +% \frac{f^{(2)}(x_0)}{2!}\cdot(x-x_0)^2 +
+	\dots +\frac{f^{(n)}(x_0)}{n!}\cdot(x-x_0)^n
 \end{equation} %Video von Mathepeter
-annähern, wobei bei steigender Anzahl $n$ der Polynomglieder die Genauigkeit der Annäherung steigt.
+annähern, wobei bei steigender Anzahl $n$ der Polynomglieder die Genauigkeit der Annäherung steigt.\footnote{Vgl. Bronstein, Ilja Nikolajewitsch; Mühlig, Heiner; Musiol, Gerhart; Semendjajew, Konstantin Adolfowitsch: Taschenbuch der Mathematik, Haan-Gruiten $2016^{10}$ S. $455$}
 
-Versuchen wir nun den $cos(x)$ durch ein unendlich langes Taylorpolynom, eine sogenannte Taylorreihe, so sehr anzunähern, dass das Polynom getrost der Funktion gleichgesetzt werden kann.
+
+Versuchen wir nun den $\cos(x)$ durch ein unendlich langes Taylorpolynom, eine sogenannte Taylorreihe, so sehr anzunähern, dass das Polynom getrost der Funktion gleichgesetzt werden kann.
+
+
 Wir bestimmen $x_0=0$, da an dieser Stelle die Sinus- und Kosinuswerte einfach bestimmt werden können.
-\[cos(x)=\frac{cos(0)}{0!}\times(x-0) + \frac{-sin(0)}{1!}\times(x-0) + \frac{-cos(0)}{2!}\times(x-0)^2+\frac{sin(0)}{3!}\times(x-0)^3+\dots\]
-Dabei fällt auf, dass bei jedem zweiten Polynomglied im Zähler des Bruches ein positives oder negatives $sin(0)$ vorliegt.
-Da $sin(0)=0$ ist, haben diese Glieder keinen Einfluss auf den Wert des Polynoms und können weggelassen werden. In den restlichen Gliedern ligt ein $cos(x)$ vor. Dies ist bei $x=0$ gleich $cos(0)=1$. Damit lässt sich das Polynom vereinfachen zu
-\[cos(x)=1-\frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^6}{6!}+\frac{x^8}{8!}+\dots\]
-Die Polynomformen anderer Funktionen erhält man nach analogem Verfahren, wie zum Beispiel die Sinusfunktion
-\[sin(x)=x-\frac{x}{1!}+\frac{x^3}{3!}-\frac{x^5}{5!}+\frac{x^7}{7!}+\dots\]
-oder hier die $e$-Funktion
-\[e^x=1+\frac{x}{1!}+\frac{x^2}{2!}+\frac{x^3}{3!}+\frac{x^4}{4!}+\dots\]
+\[\cos(x)=\frac{\cos(0)}{0!}\cdot(x-0) + \frac{-\sin(0)}{1!}\cdot(x-0) + \frac{-\cos(0)}{2!}\cdot(x-0)^2+\frac{\sin(0)}{3!}\cdot(x-0)^3+\dots\]
+Dabei fällt auf, dass bei jedem zweiten Polynomglied im Zähler des Bruches ein positives oder negatives $\sin(0)$ vorliegt.
+Da $\sin(0)=0$ ist, haben diese Glieder keinen Einfluss auf den Wert des Polynoms und können weggelassen werden. In den restlichen Gliedern ligt ein $\cos(x)$ vor. Dies ist bei $x=0$ gleich $\cos(0)=1$. Damit lässt sich das Polynom vereinfachen zu
 
-Mithilfe des Sinus und Kosinus können wir nun komplexe Zahlen als Polynome aufschreiben. Sehen wir uns der Einfachheit halber zuerst eine Zahl an, die auf dem Einheitskreis liegt und damit als $l=1$ hat.
-\begin{equation}
-	z=%\times(\cos(\varphi)+i\times\sin(\varphi))=
-	\left(1-\frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^6}{6!}+\dots\right)+i\left(x-\frac{x}{1!}+\frac{x^3}{3!}-\frac{x^5}{5!}+\dots\right)
+\begin{equation}\label{cos}
+	\cos(x)=1-\frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^6}{6!}+\dots
 \end{equation}
-Vergleicht man nun $z$ mit der Polynomform von $e^{i\varphi}$ stellt man fest, dass sie gleich sind. 
-In der Taylorreihe von $e^{i\varphi}$ haben die Polynomglieder im Zähler ein $i^n\varphi^n$. Wir müssen nun bedenken, dass $i^2=-1$ ist und durch Umformungen und Umgruppierungen entsteht
-\begin{multline}	%Wahrscheinlich mit Fehler
+
+Nach analogem Verfahren erhält man auch die Sinusfunktion als Reihe
+
+\begin{equation}\label{sin}
+	\sin(x)=\frac{x}{1!}-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\dots
+\end{equation}
+
+Mithilfe des Sinus und Kosinus können wir nun komplexe Zahlen als Polynome aufschreiben. Sehen wir uns der Einfachheit halber zuerst eine Zahl an, die auf dem Einheitskreis liegt und damit als $r=1$ hat. Setzen wir \eqref{cos} und \eqref{sin} in \eqref{eq.trigon}, so folgt
+\begin{equation}\label{taylor}
+	z=%\cdot(\cos(\varphi)+i\cdot \sin(\varphi))=
+	\left(1-\frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^6}{6!}+\dots\right)+i\left(\frac{x}{1!}-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\dots\right)
+\end{equation}
+
+Entwickeln wir nun auch die Funktion $e(x)$ als Taylorreihe, im Punkt $x_0=0$.
+Dabei beachten wir, dass $e(0)=1$ und $e\prime(x)=e(x)$.
+
+\begin{equation}\label{expo}
+	e^x=1+\frac{x}{1!}+\frac{x^2}{2!}+\frac{x^3}{3!}+\frac{x^4}{4!}+\dots
+\end{equation}
+
+
+
+
+Setzen wir in \eqref{taylor} als $x=\varphi$ und in \eqref{expo} $x=i\varphi$ ein.
+Bedenken wir, dass $i^2=-1$, $i^3=-i$ und $i^4=1$, entsteht durch Umformungen und Umgruppierungen:
+
+\begin{multline}
 	e^{i\varphi}=1+\frac{i\varphi}{1!}+\frac{i^2\varphi^2}{2!}+\frac{i^3\varphi^3}{3!}+\frac{i^4\varphi^4}{4!}+\dots=
 	1+\frac{i\varphi}{1!}-\frac{\varphi^2}{2!}-\frac{i\varphi^3}{3!}+\frac{\varphi^4}{4!}+\dots=\\
-	\left(1-\frac{\varphi^2}{2!}+\frac{\varphi^4}{4!}-\frac{\varphi^6}{6!}+\dots\right)+i\times\left(\varphi-\frac{\varphi}{1!}+\frac{x\varphi^3}{3!}-\frac{\varphi^5}{5!}+\dots\right) =\\
-	\cos(\varphi) + i\times\sin(\varphi)=z
+	\left(1-\frac{\varphi^2}{2!}+\frac{\varphi^4}{4!}-\frac{\varphi^6}{6!}+\dots\right)+i\cdot\left(\frac{\varphi}{1!}-\frac{x\varphi^3}{3!}+\frac{\varphi^5}{5!}-\frac{\varphi^7}{7!}+\dots\right) =\\
+	\cos(\varphi) + i\cdot \sin(\varphi)=z
 \end{multline}
-Hierbei handelt es sich um die berühmte \emph{"{}Eulersche Formel"}, welche Besagt, dass
+Hierbei handelt es sich um die berühmte \emph{"{}Eulersche Formel"}, welche besagt, dass
 \begin{equation} \label{euler}
-	e^{i\varphi}=\cos(\varphi)+i\times\sin(\varphi)
+	e^{i\varphi}=\cos(\varphi)+i\cdot \sin(\varphi)
 \end{equation}
-Daraus folgt, dass komplexe Zahlen auf dem Einheitskreis durch den Term $e^{i\varphi}$ dargestellt werden können. Für andere komplexe Zahlen muss noch der Abstand vom Ursprung, also der Betrag $r$, bedacht werden und für sie gilt
-\[z=r\times e^{i\varphi}\]
 
-
-%Bis hier korrigiert
+"Mithilfe der Eulerschen Formel können wir jetzt eine beliebige komplexe Zahl umformen in die
+\begin{equation}
+	\textrm{Exponentialform:  } z=r(\cos \varphi + \sin \varphi)= r e^{i\varphi}
+\end{equation}
+mit $r=|z|$ und $\varphi=arg(z)$."\footnote{{Schmidt, Harald: Elementare Technomathematik, Amberg $2018$, S. $299$}}\\
 
 Diese Darstellung von komplexen Zahlen hat ihre berühmteste Anwendung in der sogenannten \emph{eulerschen Identität}.
 Wird nämlich in die eulersche Formel \eqref{euler} als Winkel $\varphi=\pi$ eingesetzt, so hat dieser Ausdruck einen erstaunlich simplen Wert.
-Der Kosinus hat beim Winkel $\pi$ den Wert $0$ und der Sinus den Wert $-1$.
-Dadurch entsteht die Formel
-\[e^{i\pi}+1=0\]
-welche von den meisten Mathematikern als einzigartig angesehen wird.
+Da der Kosinus beim Winkel $\pi$ den Wert $-1$ und der Sinus den Wert $0$ haben, entsteht die Formel
+
+\begin{equation}
+	\boxed{e^{i\pi}+1=0}
+\end{equation}
+
+\noindent welche von den allen Mathematikern als einzigartig angesehen wird.
 Das Herausragende an ihr ist, dass sie "{}einen verblüffend einfachen Zusammenhalt zwischen vier der bedeutendsten mathematischen Konstanten herstellt:
 Der Eulerschen Zahl $e$, der imaginären Einheit $i$, der Kreiszahl $\pi$ sowie der Einheit $1$ der reellen Zahlen."
 \footnote{Engel, Joachim; Fest, Andreas: Komplexe Zahlen und ebene Geometrie, Ludwigsburg $2015^3$, S. $32$}
-Der eulerschen Identität wird oftmals der Titel "{}schönste Formel der Mathematik"{} zugeschrieben und die Eleganz, mit der sie die wichtigsten Konstanten aus den verschiedenen Teilbereichen der Mathematik verbindet ist hoch geschätzt.\\
+Der eulerschen Identität wird oftmals der Titel "{}schönste Formel der Mathematik"{} zugeschrieben und die Eleganz, mit der sie die wichtigsten Konstanten aus den verschiedenen Teilbereichen verbindet ist hoch geschätzt.\\
 
 
 
@@ -343,104 +375,142 @@ Der eulerschen Identität wird oftmals der Titel "{}schönste Formel der Mathema
 
 
 
-Komplexe Zahlen, in ihrer Potenzform geschrieben, können eine Vielzahl von Problemen stark vereinfachen.
-So wird zum Beispiel die Multiplikation von komplexen Zahlen viel anschaulicher, wenn diese Darstellung benutzt wird.
-Auf recht einfache Weise entsteht somit der Zusammenhang
-\[z_1\times z_2=(r_1 \times e^{i\varphi_1}) \times (r_2 \times e^{i\varphi_2})=r_1 r_2 \times e^{i(\varphi_1+\varphi_2)}\]
+Komplexe Zahlen, in ihrer Exponentialform geschrieben, können eine Vielzahl von Problemen stark vereinfachen.
+So wird zum Beispiel die Multiplikation von komplexen Zahlen viel übersichtlicher, wenn diese Darstellung benutzt wird.
+Aus den Eigenschaften der Potenzfunktion entsteht somit der Zusammenhang
+\[z_1\cdot z_2=(r_1 \cdot e^{i\varphi_1}) \cdot (r_2 \cdot e^{i\varphi_2})=r_1 r_2 \cdot e^{i(\varphi_1+\varphi_2)}\]
 welcher es offensichtlich macht, dass Multiplikation von komplexen Zahlen durch eine Multiplikation der Beträge und Addition der Winkel dieser Zahlen erreicht wird.
 
 Im Fall von Potenzieren von komplexen Zahlen gilt nach den Regeln der Multiplikation dann
-\[z^n=r^n \times e^{i(n\varphi)}\]
+
+\begin{equation}\label{potenz}
+	z^n=r^n \cdot e^{i(n\varphi)}
+\end{equation}
+
+
+
+Wenn wir in diese Formel die eulersche Formel \eqref{euler} einsetzen, entsteht die Formel von Moivre:
+\begin{equation}
+	[r(\cos\varphi+i\sin\varphi)]^n=r^n(\cos n\varphi+i\sin n\varphi)
+\end{equation}
 
 Einen sehr anschaulichen Effekt hat diese Formel nun wenn wir versuchen ihre geometrische Bedeutung zu Interpretieren.
-Sie kann nämlich als die Formel für die Lösungen einer Gleichung der Form $z^n=h$ gesehen werden.
-Setzen wir als $h=1$ ein, so erhalten wir eine Kreisteilungsgleichung $z^n=1$. Wir bestimmen somit in diesem Fall die $n$-te Wurzel aus $1$.
-Benutzen wir nun die Formel $r^n \times e^{i(n\varphi)}=1$, entspricht $r$ für jedes $z$ gleich $r=1$, da $r^n=1$ gilt und $r$ nur positive Werte annehmen kann.\\
+Dafür benutzen wir sie zur Lösung der Gleichung $z^n=1$, einer sogenannten Kreisteilungsgleichung.
+Wir bestimmen somit die $n$-te Wurzel aus $1$.
 
-für den Wert des Winkels $\varphi$ gibt es jedoch mehrere Möglichkeiten.
-Damit $e^{i(n\varphi)}$ gleich $1$ ist, muss die geometrische Darstellung des Terms als Winkel $0$ oder ein Vielfaches von $2\pi$ haben.
-Nur wenn dies gilt fällt der Winkel multipliziert mit $n$ wieder zurück auf die Realachse zum Punkt $(1,0)$.
-Es lässt sich leicht zeigen, dass es auf dem Einheitskreis genau $n$ solche Punkte gibt, welche beide Bedingungen für Länge und Winkel erfüllen.
+\begin{equation}\label{kreis}
+	r^n(\cos n\varphi+i\sin n\varphi)=1
+\end{equation}
+
+"{}Zwei komplexe Zahlen sind gleich, wenn die zu ihrer Darstellung benötigte Vektoren gleich sind."
+\footnote{Bronstein, Ilja Nikolajewitsch; Mühlig, Heiner; Musiol, Gerhart; Semendjajew, Konstantin Adolfowitsch: Taschenbuch der Mathematik, Haan-Gruiten $2016^{10}$ S. $36$}
+Das heißt, dass in \eqref{kreis} die Beträge auf der linken und rechten Seite gleich sein müssen, während die Winkel gleich sind oder sich durch ein Vielfaches von $2\pi$ unterscheiden.\\
+
+
+Die Zahl $1$ aus der rechten Seite von \eqref{kreis} hat den Betrag $1$ und da der Betrag $r$ die Länge eines Vektors beschreibt und somit stets eine positive reelle Zahl ist, hat die Gleichung $r^n=1$ in $\mathbb{R}$ nur eine Lösung $r=1$.
+
+Der Winkel von $1$ in der Polarform ist gleich $0$, für den Wert des Winkels $\varphi$ aus der linken Seite von \eqref{kreis} gibt es jedoch mehrere Möglichkeiten.
+Damit \eqref{kreis} wahr ist, muss $n\varphi$ gleich $0$ oder einem Vielfachen von $2\pi$ sein.
+Es lässt sich leicht zeigen, dass es auf dem Einheitskreis genau $n$ solche Punkte gibt, welche beide Bedingungen für Betrag und Winkel erfüllen.
 Ein solcher Punkt ist $z_0=(1,0)$ selber, damit wäre der Winkel $\varphi_0=0$, aber dies ist ja selbstverständlich.
 Uns interessieren viel mehr die Punkte, welche komplexe Zahlen sind.
 Der erste solche Punkt $z_1$, hat als $\varphi_1=\frac{2\pi}{n}$, da er durch $n$ Multiplikationen mit sich selbst nach einer Umdrehung wieder in $(1, 0)$ gelangen muss.
 Nehmen wir für den nächsten Punkt $z_2$ den doppelten Winkel, so landet der Punkt nach dem Potenzieren mit $n$ mit insgesamt zwei Umdrehungen auf der $1$.
-Dieses Verfahren lässt sich insgesamt $n-1$ mal anwenden, um neue Punkte zu bekommen.
+Dieses Verfahren lässt sich $n-1$ mal anwenden, um neue Punkte zu bekommen.
 Versuchen wir nämlich weitere mögliche Winkel aus dem ersten Winkel $\varphi_1$ zu bilden, so müssen wir den Winkel $\varphi_1$ mit $n$ multiplizieren.
-Nun ist aber $\varphi_1 \times n =\frac{2\pi}{n}\times n = 2\pi$, also eine ganze Umdrehung.
-Damit ist dieser Punkt $z_n=(1,0)$ und würde nur den Punkt $z_0$ beschreiben.
-Weiteres Addieren von $\varphi_1$ gibt auch keine neuen Wurzeln aus 1, da sie schon vorhandenen Punkten gleichen würden.\\
+Nun ist aber $\varphi_1 \cdot n =\frac{2\pi}{n}\cdot n = 2\pi$, also eine ganze Umdrehung.
+Damit ist dieser Punkt $z_n=(1,0)$ und würde nur den schon vorhandenen Punkt $z_0$ beschreiben.
+Weiteres Addieren von $\varphi_1$ gibt auch keine neuen Wurzeln aus 1, da sie auch bloß vorherige Punkte ergeben.\\
 
 
-Es liegen also $n$ verschiedene Punkte auf der Gaußschen Zahlenebene vor, die als $n$-te Wurzeln aus 1 gesehen werden können.
+Es liegen also $n$ verschiedene Punkte auf der Gaußschen Zahlenebene vor, die als $n$-te Wurzeln aus $1$ gesehen werden können.
 Da die Winkel aller dieser Punkte Vielfache eines ersten Winkels $\varphi_1$ sind, lässt sich schließen, dass diese Lösungen in ihrer geometrischer Form in gleichmäßigen Abständen als Punkte auf dem Einheitskreis platziert sind.
 Sie bilden somit die Ecken eines regelmäßigen Vielecks, welches als eine Ecke den Punkt $(1,0)$ hat.
-Damit ist die graphische Darstellung beliebiger Wurzeln aus $1$ gefunden.
+Damit ist die graphische Darstellung beliebiger Wurzeln aus $1$, und damit der Lösungen von Kreisteilungsgleichungen, gefunden.
+
+\begin{center}
+	\definecolor{zzttqq}{rgb}{0.6,0.2,0}
+	\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1}
+	\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+		\begin{axis}[
+			x=2.5cm,y=2.5cm,
+			axis lines=middle,
+			ymajorgrids=true,
+			xmajorgrids=true,
+			xlabel={$Re(z)$},
+			ylabel={$Im(z)$},
+			xmin=-2.0741831415874628,
+			xmax=2.074491179889266,
+			ymin=-1.8844974113330106,
+			ymax=1.5592395660879161,
+			xtick={-2,-1.5,...,2},
+			ytick={-2,-1.5,...,2},]
+			\clip(-2.0741831415874628,-1.8844974113330106) rectangle (2.074491179889266,1.5592395660879161);
+			\draw [line width=1pt] (0,0) circle (2.5cm);
+			\draw [line width=1pt,color=zzttqq] (1,0)-- (0.30901699437494745,0.9510565162951535);
+			\draw [line width=1pt,color=zzttqq] (0.30901699437494745,0.9510565162951535)-- (-0.8090169943749471,0.5877852522924731);
+			\draw [line width=1pt,color=zzttqq] (-0.8090169943749471,0.5877852522924731)-- (-0.8090169943749472,-0.5877852522924729);
+			\draw [line width=1pt,color=zzttqq] (-0.8090169943749472,-0.5877852522924729)-- (0.30901699437494723,-0.9510565162951534);
+			\draw [line width=1pt,color=zzttqq] (0.30901699437494723,-0.9510565162951534)-- (1,0);
+			\begin{scriptsize}
+				\draw [fill=uuuuuu] (0,0) circle (2pt);
+				\draw [fill=uuuuuu] (1,0) circle (2.5pt);
+				\draw[color=uuuuuu] (1.1356361465438737,0.10214419464243102) node {\Large $z_0$};
+				\draw [fill=uuuuuu] (0.30901699437494745,0.9510565162951535) circle (2.5pt);
+				\draw[color=uuuuuu] (0.42756333225017244,1.123036732249006) node {\Large $z_1$};
+				\draw [fill=uuuuuu] (-0.8090169943749471,0.5877852522924731) circle (2.5pt);
+				\draw[color=uuuuuu] (-0.9022414439533022,0.7090298303635292) node {\Large $z_2$};
+				\draw [fill=uuuuuu] (-0.8090169943749472,-0.5877852522924729) circle (2.5pt);
+				\draw[color=uuuuuu] (-0.9022414439533022,-0.7081143470310872) node {\Large $z_3$};
+				\draw [fill=uuuuuu] (0.30901699437494723,-0.9510565162951534) circle (2.5pt);
+				\draw[color=uuuuuu] (0.42756333225017244,-1.1490152839400384) node {\Large $z_4$};
+			\end{scriptsize}
+		\end{axis}
+	\end{tikzpicture}
+	
+	\begin{small}
+		Abbildung $2$: Beispiel: Fünfte Wurzeln aus $1$
+	\end{small}
+\end{center}
+
+Wollen wir die $n$-ten Wurzeln aus einer beliebigen komplexen Zahl $z=r\cdot e^i\varphi$ ziehen, wir das obengenannte $n$-Eck skaliert und gedreht.
+Genauer gesagt:\\
+
+\noindent\emph{"{}Eine komplexe Zahl $z=r e^{i\varphi}$ besitzt genau $n$ verschiedene Wurzeln}
+\begin{equation}\label{vieleck}
+	\sqrt[n]{z}=\sqrt[n]{r}\left(\cos\frac{\varphi+2k\pi}{n}+i\sin\frac{\varphi+2k\pi}{n}\right) \textrm{ für } k=0, 1, \dots, n-1
+\end{equation}
+\emph{In der [Gaußschen Zahlenebene] liegen die Wurzelwerte auf einem Kreis mit Radius $\sqrt[n]{r}$, und sie haben einen konstanten Winkelabstand $\frac{2\pi}{n}$ voneinander, beginnend mit $\frac{\varphi}{n}$. Sie Bilden folglich die Eckpunkte eines regelmäßigen $n$-Ecks."} \footnote{Schmidt, Harald: Elementare Technomathematik, Amberg $2018$, S. $302$}
 
 
-\definecolor{zzttqq}{rgb}{0.6,0.2,0}
-\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1}
-\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
-	\begin{axis}[
-		x=2.5cm,y=2.5cm,
-		axis lines=middle,
-		ymajorgrids=true,
-		xmajorgrids=true,
-		xlabel={$Re(z)$},
-		ylabel={$Im(z)$},
-		xmin=-2.0741831415874628,
-		xmax=2.074491179889266,
-		ymin=-1.8844974113330106,
-		ymax=1.5592395660879161,
-		xtick={-2,-1.5,...,2},
-		ytick={-2,-1.5,...,2},]
-		\clip(-2.0741831415874628,-1.8844974113330106) rectangle (2.074491179889266,1.5592395660879161);
-		\draw [line width=1pt] (0,0) circle (2.5cm);
-		\draw [line width=1pt,color=zzttqq] (1,0)-- (0.30901699437494745,0.9510565162951535);
-		\draw [line width=1pt,color=zzttqq] (0.30901699437494745,0.9510565162951535)-- (-0.8090169943749471,0.5877852522924731);
-		\draw [line width=1pt,color=zzttqq] (-0.8090169943749471,0.5877852522924731)-- (-0.8090169943749472,-0.5877852522924729);
-		\draw [line width=1pt,color=zzttqq] (-0.8090169943749472,-0.5877852522924729)-- (0.30901699437494723,-0.9510565162951534);
-		\draw [line width=1pt,color=zzttqq] (0.30901699437494723,-0.9510565162951534)-- (1,0);
-		\begin{scriptsize}
-			\draw [fill=uuuuuu] (0,0) circle (2pt);
-			\draw [fill=uuuuuu] (1,0) circle (2.5pt);
-			\draw[color=uuuuuu] (1.1356361465438737,0.10214419464243102) node {\Large $z_0$};
-			\draw [fill=uuuuuu] (0.30901699437494745,0.9510565162951535) circle (2.5pt);
-			\draw[color=uuuuuu] (0.42756333225017244,1.123036732249006) node {\Large $z_1$};
-			\draw [fill=uuuuuu] (-0.8090169943749471,0.5877852522924731) circle (2.5pt);
-			\draw[color=uuuuuu] (-0.9022414439533022,0.7090298303635292) node {\Large $z_2$};
-			\draw [fill=uuuuuu] (-0.8090169943749472,-0.5877852522924729) circle (2.5pt);
-			\draw[color=uuuuuu] (-0.9022414439533022,-0.7081143470310872) node {\Large $z_3$};
-			\draw [fill=uuuuuu] (0.30901699437494723,-0.9510565162951534) circle (2.5pt);
-			\draw[color=uuuuuu] (0.42756333225017244,-1.1490152839400384) node {\Large $z_4$};
-		\end{scriptsize}
-	\end{axis}
-\end{tikzpicture}
 
-\begin{small}
-	Abbildung $2$: fünfte Wurzeln aus $1$
-\end{small}
+
+
+
+
+
+
 
 
 \section{Beispiel der Anwendung}
 
-Nun soll die Nützlichkeit der komplexen Zahlen an einer Aufgabe demonstriert werden, welche auf den Ersten Blick sich gar nicht mit Algebra lösen lässt, da sie aus der Geometrie stammt. Dieses Problem ist sehr einfach formuliert, und könnte noch aus der Antike stammen, als große Mathematik mit Stöcken in Sand gezeichnet wurde. Die Aufgabe lautet:\\
+Nun soll die Nützlichkeit der komplexen Zahlen an einer Aufgabe demonstriert werden, welche auf den ersten Blick sich gar nicht mit Algebra lösen lässt, da sie aus der Geometrie stammt. Dieses Problem ist sehr einfach formuliert, und könnte noch aus der Antike stammen, als große Mathematik mit Stöcken in Sand gezeichnet wurde. Die Aufgabe lautet:\\
 
 \noindent \textit{In einen Einheitskreis wird ein regelmäßiges $n$-Eck eingezeichnet, sodass alle Ecken auf der Kreislinie liegen.
 Eine der Ecken wird mit jeweils jeder anderen Ecke durch Strecken verbunden.
 Was ist das Produkt der Längen dieser Strecken?}\\
 
 
-Aus dem Abschnitt (4...) kennen wir Kreisteilungsgleichungen. Diese benötigt man zum Lösen der Aufgabe. Zuallererst jedoch muss die komplexe Zahlenebene festgelegt werden. 
+Aus dem 5. Abschnitt kennen wir Kreisteilungsgleichungen. Diese benötigt man zum Lösen der Aufgabe. Zuallererst jedoch muss die komplexe Zahlenebene festgelegt werden. 
 
 Setzen wir den Ursprung unseres Koordinatensystems in den Mittelpunkt des Kreises und richten es so aus, dass die Achse der Realteile durch eine der Ecken durchläuft.
 Jene Ecke mit den Koordinaten $(1,0)$ nennen wir $w_0$ und von dieser Ecke aus werden wir auch die Linien zu den anderen Ecken ziehen.
-Wenn wir nun alle Ecken als komplexe Zahlen ansehen, so können wir die Kreisteilungsgleichungen verwenden und kommen zum Schluss, dass
+Wenn wir nun alle Ecken als komplexe Zahlen ansehen, so können wir die Kreisteilungsgleichungen und die Formel \eqref{vieleck} verwenden und stellen fest, dass die Ecken die Lösungen der Gleichung
 \begin{equation}
 	z^n=1
 \end{equation}
-wobei $z$ eine $n$-te Wurzel von $1$ ist und somit auch ein Eckpunkt unseres $n$-Ecks.
+sind, wobei $z$ eine $n$-te Wurzel von $1$ ist.
 Diese restlichen Ecken nennen wir nun $w_1$, $w_2$,$\dots$,$w_{n-1}$, dabei ist $w_n = w_0 = 1$.
 Unser Vieleck sieht nun folgendermaßen aus:
 
@@ -484,19 +554,19 @@ Unser Vieleck sieht nun folgendermaßen aus:
 		\draw [line width=2pt] (1,0)-- (0.6234898018587333,-0.7818314824680298);
 		\begin{scriptsize}
 			\draw [fill=uuuuuu] (1,0) circle (2pt);
-			\draw[color=uuuuuu] (1.15,0.10) node {\Large $\omega_0$};
+			\draw[color=uuuuuu] (1.15,0.10) node {\Large $w_0$};
 			\draw [fill=uuuuuu] (0.6234898018587336,0.7818314824680298) circle (2pt);
-			\draw[color=uuuuuu] (0.8,0.9) node {\Large $\omega_1$};
+			\draw[color=uuuuuu] (0.8,0.9) node {\Large $w_1$};
 			\draw [fill=uuuuuu] (-0.2225209339563141,0.9749279121818236) circle (2pt);
-			\draw[color=uuuuuu] (-0.19041516716083384,1.1) node {\Large $\omega_2$};
+			\draw[color=uuuuuu] (-0.19041516716083384,1.1) node {\Large $w_2$};
 			\draw [fill=uuuuuu] (-0.9009688679024188,0.4338837391175584) circle (2pt);
-			\draw[color=uuuuuu] (-0.95,0.5962749166719764) node {\Large $\omega_3$};
+			\draw[color=uuuuuu] (-0.95,0.5962749166719764) node {\Large $w_3$};
 			\draw [fill=uuuuuu] (-0.9009688679024189,-0.43388373911755773) circle (2pt);
-			\draw[color=uuuuuu] (-1,-0.5) node {\Large $\omega_4$};
+			\draw[color=uuuuuu] (-1,-0.5) node {\Large $w_4$};
 			\draw [fill=uuuuuu] (-0.22252093395631456,-0.9749279121818234) circle (2pt);
-			\draw[color=uuuuuu] (-0.3,-1.1) node {\Large $\omega_5$};
+			\draw[color=uuuuuu] (-0.3,-1.1) node {\Large $w_5$};
 			\draw [fill=uuuuuu] (0.6234898018587333,-0.7818314824680298) circle (2pt);
-			\draw[color=uuuuuu] (0.75,-0.9) node {\Large $\omega_6$};
+			\draw[color=uuuuuu] (0.75,-0.9) node {\Large $w_6$};
 		\end{scriptsize}
 	\end{axis}
 \end{tikzpicture}
@@ -509,44 +579,43 @@ Unser Vieleck sieht nun folgendermaßen aus:
 
 
 
-Jeder Punkt in einem Koordinatensystem lässt sich durch einen Vektor beginnend im Ursprung und endend in diesem Punkt beschreiben. Komplexe Zahlen in ihrer geometrischer Darstellung werden genauso addieren und subtrahieren wie Vektoren und aus den Regeln der Subtraktion von Vektoren folgt, dass ein Vektor $\vec{v}$, welcher in $w_0$ beginnt und in $w_z$ endet, gleich $\vec{v}=w_z-w_0$ ist.
-$w_0$ hat die Koordinaten (1,0).
-Damit ist die Länge des Vektors, sein Betrag, und somit der Strecke, welcher $w_0$ und $w_z$ verbindet gleich $|\vec{v}| = w_z - 1$.
+Jeder Punkt in einem Koordinatensystem lässt sich durch dessen Ortsvektor, einen Vektor beginnend im Ursprung und endend in diesem Punkt, beschreiben. Komplexe Zahlen in ihrer geometrischer Darstellung werden genauso addieren und subtrahieren wie Vektoren und aus den Regeln der Subtraktion von Vektoren folgt, dass die Strecke, welche die Punkte $w_0$ und $w_k$ verbindet, gleich dem Vektor $\vec{v_k}=\vec{w_k}-\vec{w_0}$ ist.
+Der Punkt $w_0$ hat die Koordinaten (1,0) und somit ist die Länge des Vektors $\vec{v_k}$ gleich dem Betrag der Differenz der komplexen Zahlen $w_k$ und $1$, also $|w_k-1|$.
+
 
 In der Aufgabenstellung wird nach dem Produkt aller solcher Verbindungsstrecken gefragt.
 Dieses Produkt, welches wir nun $X$ nennen, ist demnach gleich
-\[X = |(w_1-1)|\times|(w_2-1)|\times\dots\times|(w_{n-1}-1)|\]
-Jeder Faktor dieses Produkts ist der Betrag der jeweiligen Klammer, da die Längen der Strecken nur positive Werte annehmen können.
-Das bedeutet aber auch, dass man in jeder Klammer statt $(w_z-1)$ auch $(1-w_z)$ schreiben kann, ohne den Betrag zu verändern.
+\[X = |w_1-1|\cdot|w_2-1|\cdot\ldots\cdot|w_{n-1}-1|\]
+Aus den Eigenschaften des Betrags folgt, dass sich $|w_k-1|$ durch $|1-w_k|$ ersetzten lässt.
 Das gesamte Produkt entspricht dann
-\[X=|(1-w_1)|\times|(1-w_2)|\times\dots\times|(1-w_{n-1})|\]
-Nach den Regeln der Multiplikation von Beträgen ist das Produkt der Beträge von Faktoren gleich dem Betrag des Produkts dieser Faktoren. Damit gilt
+\[X=|1-w_1|\cdot|1-w_2|\cdot\ldots\cdot|1-w_{n-1}|\]
+Nach den Regeln der Multiplikation von Beträgen ist das Produkt der Beträge gleich dem Betrag des Produkts. Damit gilt
 \begin{equation}\label{X}
-	X=|(1-w_1)\times(1-w_2)\times\dots(1-w_{n-1})|
+	X=|(1-w_1)\cdot(1-w_2)\cdot\ldots\cdot(1-w_{n-1})|
 \end{equation}
 
-An dieser Stelle lasst uns den Term, welcher sich innerhalb der Betragsstriche in $X$ liegt ansehen.
-Nennen wir diesen Term $H$. Damit ist $X=|H|$ und
+An dieser Stelle lasst uns den Term, welcher innerhalb der Betragsstriche in $X$ liegt, ansehen.
+Nennen wir diesen Term $H$. Damit ist
 \begin{equation}\label{H}
-	H=(1-w_1)\times(1-w_2)\times\dots(1-w_{n-1})
+	X=|H| \textrm{\quad wobei \quad}	H=(1-w_1)\cdot(1-w_2)\cdot\ldots\cdot(1-w_{n-1})
 \end{equation}
 
-Erinnern wir uns, dass die Eckpunkte des Vielecks auf dem Einheitskreis auch als Lösungen der Gleichung $z^n=1$ beziehungsweise $z^n-1=0$ dargestellt werden konnten. Die erweiterte Fassung des Fundamentalsatzes der Algebra (\ref{eq:funda2}) besagt nun, dass %nicht ganz Fundamentalsatz, sondern Faktorzerlegung
-\[z^n-1=(z-w_0)\times(z-w_1)\times(z-w_2)\times\dots(z-w_{n-1})\]
-da $w_0=1$ ist, folgt
-\[z^n-1=(z-1)\times(z-w_1)\times(z-w_2)\times\dots(z-w_{n-1})\]
-Diese Gleichung ist nahezu identisch mit $H$ bei $z=1$.
-Der einzige Unterschied ist der Faktor $(z-1)$, welcher bei $H$ fehlt.
+Erinnern wir uns, dass die Eckpunkte des Vielecks auf dem Einheitskreis auch als Lösungen der Gleichung $z^n=1$ beziehungsweise $z^n-1=0$ betrachtet werden konnten. Die Folge \ref{eq.faktor} des Fundamentalsatzes der Algebra besagt nun, dass 
+\[z^n-1=(z-w_0)\cdot(z-w_1)\cdot(z-w_2)\cdot\ldots\cdot(z-w_{n-1})\]
+da $w_0=1$ ist, schließt sich
+\[z^n-1=(z-1)\cdot(z-w_1)\cdot(z-w_2)\cdot\ldots\cdot(z-w_{n-1})\]
+Bei $z=1$ ist diese Gleichung nahezu identisch mit $H$ .
+Der einzige Unterschied ist der erste Faktor $(z-1)$, welcher bei $H$ fehlt.
 Möchten wir nun unsere Gleichung ohne diesen Faktor berechnen, so müssen wir sie durch $(z-1)$ teilen und es entsteht
-\begin{equation}\label{frac}
-	H=(z-w_1)\times(z-w_2)\times\dots(z-w_{n-1})=\frac{z^n-1}{z-1}
+\begin{equation}\label{bruch}
+	H=(z-w_1)\cdot(z-w_2)\cdot\ldots\cdot(z-w_{n-1})=\frac{z^n-1}{z-1} \quad \textrm{ bei } z=1
 \end{equation}
-bei $z=1$. Dies kann auch aufgeschrieben werden als
-\[\frac{z^n-1}{z-1}=\frac{1-z^n}{1-z\hspace{2mm}}\]
+ Dies kann auch aufgeschrieben werden als
+\[H=\frac{z^n-1}{z-1}=\frac{1-z^n}{1-z\hspace{2mm}}\]
 Da wir versuchen, diese Gleichung bei $z=1$ zu lösen, müssen wir über einen Umweg gehen, ansonsten würde bei einem direkten Einsetzen der Nenner gleich $0$ sein.
 Dabei fällt auf, dass $\frac{1-z^n}{1-z\hspace{1mm}}$ die Zusammenfassung einer geometrischen Reihe ist.
 (Eine Geometrische Reihe $G_n$ ist ein Term der Form $a+aq+aq^2+\dots+aq^n$.)
-Dass dies wahr ist lässt sich mithilfe einiger unkomplizierter Überlegungen zeigen.
+Dass dies wahr ist lässt sich mithilfe einiger unkomplizierter Überlegungen zeigen:
 
 "Wir werden beweisen, daß [sic!] für jeden Wert von $n$ [$\dots$]
 \begin{equation}
@@ -567,31 +636,24 @@ Dies ist aber gerade die Behauptung [, die wir beweisen wollen,] für den Fall $
 \footnote{Courant, Richard; Robbins, Herbert, Was ist Mathematik? Berlin $1962^4$, S. $11$}
 
 Nun können wir $\frac{1-z^n}{1-z}$ als eine Geometrische Reihe aufschreiben.
-\[1\times\frac{1-z^n}{1-z\hspace{2mm}}=1+z+z^2+z^3+\dots+z^{n-1}\]
+\[\frac{1-z^n}{1-z\hspace{2mm}}=1+z+z^2+z^3+\dots+z^{n-1}\]
 bedenken wir, dass $\frac{z^n-1}{z-1}=\frac{1-z^n}{1-z\hspace{1mm}}$ ist, gilt bei $z=1$
 \[\frac{z^n-1}{z-1}=1+1+1^2+1^3+\dots+1^{n-1}=n\]
 da die $1$ in dieser geometrischen Reihe insgesamt $n$ mal als Summand vorliegt.
-Hier muss man anmerken, dass $n$ positiv sein muss, da es die Anzahl der Ecken im Vieleck beschreibt und Anzahlen nur natürliche Zahlen sein können.
 
 
+Den Term $\frac{z^n-1}{z-1}$ haben wir ursprünglich aufgestellt, da er nach der Gleichung \eqref{bruch} äquivalent zu $H$ ist. Damit ist $H=n$ und aus \eqref{H} schließt sich
+\[X=|n|=n\]
+da $n$ eine natürliche Zahl ist\\
 
-% Optional: Zweiter Beweis: Polynomdivision
-
-
-
-Den Term $\frac{z^n-1}{z-1}$ haben wir ursprünglich aufgestellt, da er nach der Gleichung (\ref{H}) äquivalent zu $H$ ist. Damit ist
-\[H=n\]
-$H$ selber war der Term innerhalb der Betragsstriche von $X$, denn $X=|H|$.
-Da nun $H=n$ ist mit $n$ als eine zwingend positive Zahl, lässt sich $H$ mit $X$ direkt gleichstellen und man schließt heraus, dass:
-\[X=n\]
-$X$ ist das Produkt aller Längen der Strecken, die eine Ecke des ursprünglichen Vielecks mit den verbinden. Somit ist die Aufgabe gelöst und jenes Produkt ist gleich der Anzahl der Ecken im Vieleck.
+$X$ ist das Produkt der Längen aller Strecken, die eine Ecke des ursprünglichen Vielecks mit den restlichen verbinden. Somit ist die Aufgabe gelöst und jenes Produkt ist gleich der Anzahl der Ecken im Vieleck.
 
 
 
 
 
 
-
+\newpage
 \section{Literaturverzeichnis}
 
 
