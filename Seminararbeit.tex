@@ -31,7 +31,7 @@
 \renewcommand{\headrulewidth}{0mm}  % Dicke der Linie unter der Kopfzeile
 %\lfoot{Unten Links}
 %\rfoot{Unten Rechts}
-%\rhead{Oben Rechts}
+\rhead{ }
 %\chead{Oben Mitte}
 %\lhead{Oben Links}
 % \cfoot{Unten Mitte} % falls nicht angegeben: Seitennummer
@@ -40,6 +40,8 @@
 \onehalfspacing % Zeilenabstand 1.5
 %\doublespacing % Zeilenabstand 2
 %\singlespacing % Zeilenabstand 1
+
+\usepackage{float} %Bilder festnageln
 
 %% Schriften
 \usepackage{euscript}
@@ -51,10 +53,23 @@
 \newcommand*{\hm}[1]{#1\nobreak\discretionary{}
 {\hbox{$\mathsurround=0pt #1$}}{}}
 
+
 %%% Kopfzeile
 \author{Jacob Cazacov}
 \title{Komplexe Zahlen von algebraischer Sicht aus betrachtet}
 \date{\today}
+
+
+
+
+
+
+
+
+
+
+
+
 
 \usepackage{cite} % Bibliographie
 %\usepackage[superscript]{cite} % Verweise in obere Zeilen
@@ -79,12 +94,19 @@
 \thispagestyle{empty}
 
 \newpage
-
+ leer
 \thispagestyle{empty}
+
+\newpage
+
+
+
 
 %\renewcommand{\contentsname}{Gliederung}	% Überschrift des Inhaltsverzeichnisses
 
 \tableofcontents
+
+\thispagestyle{empty}
 
 \newpage
 
@@ -188,11 +210,11 @@ mit den komplexen Zahlen $x_0, x_1, x_2,\dots,x_{n-1}$ als Nullstellen des Polyn
 
 Als Folgerung hieraus kann nun eine zweite Fassung des Fundamentalsatzes der Algebra gebildet werden:\\
 
-\noindent Jede Gleichung folgender Form (wobei $n \geq 1$):
+\noindent \emph{Jede Gleichung folgender Form (wobei $n \geq 1$):
 \begin{equation}\label{eq:funda2}
 		a_nz^n + a_{n-1}z^{n-1} + a_{n-2}z^{n-2} + \dots + a_1z + a_0 = 0	
 \end{equation}
-besitzt \underline{genau $n$} Lösungen in $\mathbb{C}$, wobei die Vielfachheit der Lösung beachtet werden muss.\footnote{Vgl. Courant/Robbins: Was ist Mathematik? S. $80$.}\\
+besitzt \underline{genau $n$} Lösungen in $\mathbb{C}$, wobei die Vielfachheit der Lösung beachtet werden muss.\footnote{Vgl. Courant/Robbins: Was ist Mathematik? S. $80$.}}\\
 
 
 
@@ -204,6 +226,7 @@ Komplexe Zahlen wurden somit das Mittel schlechthin im Umgang mit Polynomen, sie
 Diese Zahlen fanden Anwendung bei der Mathematik der Reste und hatte wegweisende Bedeutung für die Zahlentheorie.
 Sie sind zweifellos die Grundlage für viele Teilbereiche der Mathematik. 
 \footnote{Vgl. Pieper: Die komplexen Zahlen. S. $199$.}
+\newpage
 
 
 \section{Eulersche Formel}
@@ -242,6 +265,9 @@ Jede komplexe Zahl ist also gleich
 	\boxed{z=r\cdot(\cos\varphi+i \sin\varphi)}	
 \end{equation}
 
+
+\begin{figure}[H]
+	
 \begin{center}
 	\definecolor{qqwuqq}{rgb}{0,0.39215686274509803,0}
 	\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1}
@@ -278,11 +304,10 @@ Jede komplexe Zahl ist also gleich
 		\end{axis}
 	\end{tikzpicture}
 
-\begin{small}
-	Abbildung $1$: Gaußsche Zahlenebene
-\end{small}
-
+\caption{Gaußsche Zahlenebene}
 \end{center}
+
+\end{figure}
 
 Betrachten wir nun den Sinus, beziehungsweise den Kosinus.
 Wollen wir sie mit anderen Funktionen vergleichen, so wäre es besser wenn sie in der Polynomform vorlägen, da mit dieser in der Algebra leicht umgegangen werden kann.
@@ -382,7 +407,7 @@ Komplexe Zahlen, in ihrer Exponentialform geschrieben, können eine Vielzahl von
 So wird zum Beispiel die Multiplikation von komplexen Zahlen viel übersichtlicher, wenn diese Darstellung benutzt wird.
 Aus den Eigenschaften der Potenzfunktion entsteht somit der Zusammenhang
 \[z_1\cdot z_2=(r_1 \cdot e^{i\varphi_1}) \cdot (r_2 \cdot e^{i\varphi_2})=r_1 r_2 \cdot e^{i(\varphi_1+\varphi_2)}\]
-welcher es offensichtlich macht, dass Multiplikation von komplexen Zahlen durch eine Multiplikation der Beträge und Addition der Winkel dieser Zahlen erreicht wird.\footnote{Schmidt: Elementare Technomathematik. S. 299.}
+welcher es offensichtlich macht, dass Multiplikation von komplexen Zahlen durch eine Multiplikation der Beträge und Addition der Winkel dieser Zahlen erreicht wird.\footnote{Vgl. Schmidt: Elementare Technomathematik. S. 299.}
 
 Im Fall von Potenzieren von komplexen Zahlen gilt nach den Regeln der Multiplikation dann
 
@@ -431,52 +456,53 @@ Es liegen also $n$ verschiedene Punkte auf der Gaußschen Zahlenebene vor, die a
 Da die Winkel aller dieser Punkte Vielfache eines ersten Winkels $\varphi_1$ sind, lässt sich schließen, dass diese Lösungen in ihrer geometrischer Form in gleichmäßigen Abständen als Punkte auf dem Einheitskreis platziert sind.
 Sie bilden somit die Ecken eines regelmäßigen Vielecks, welches als eine Ecke den Punkt $(1,0)$ hat.
 Damit ist die graphische Darstellung beliebiger Wurzeln aus $1$, und damit der Lösungen von Kreisteilungsgleichungen, gefunden.
+\begin{figure}[H]
+	\begin{center}
+		\definecolor{zzttqq}{rgb}{0.6,0.2,0}
+		\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1}
+		\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+		\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+			\begin{axis}[
+				x=2.5cm,y=2.5cm,
+				axis lines=middle,
+				ymajorgrids=true,
+				xmajorgrids=true,
+				xlabel={$Re(z)$},
+				ylabel={$Im(z)$},
+				xmin=-2.0741831415874628,
+				xmax=2.074491179889266,
+				ymin=-1.8844974113330106,
+				ymax=1.5592395660879161,
+				xtick={-2,-1.5,...,2},
+				ytick={-2,-1.5,...,2},]
+				\clip(-2.0741831415874628,-1.8844974113330106) rectangle (2.074491179889266,1.5592395660879161);
+				\draw [line width=1pt] (0,0) circle (2.5cm);
+				\draw [line width=1pt,color=zzttqq] (1,0)-- (0.30901699437494745,0.9510565162951535);
+				\draw [line width=1pt,color=zzttqq] (0.30901699437494745,0.9510565162951535)-- (-0.8090169943749471,0.5877852522924731);
+				\draw [line width=1pt,color=zzttqq] (-0.8090169943749471,0.5877852522924731)-- (-0.8090169943749472,-0.5877852522924729);
+				\draw [line width=1pt,color=zzttqq] (-0.8090169943749472,-0.5877852522924729)-- (0.30901699437494723,-0.9510565162951534);
+				\draw [line width=1pt,color=zzttqq] (0.30901699437494723,-0.9510565162951534)-- (1,0);
+				\begin{scriptsize}
+					\draw [fill=uuuuuu] (0,0) circle (2pt);
+					\draw [fill=uuuuuu] (1,0) circle (2.5pt);
+					\draw[color=uuuuuu] (1.1356361465438737,0.10214419464243102) node {\Large $z_0$};
+					\draw [fill=uuuuuu] (0.30901699437494745,0.9510565162951535) circle (2.5pt);
+					\draw[color=uuuuuu] (0.42756333225017244,1.123036732249006) node {\Large $z_1$};
+					\draw [fill=uuuuuu] (-0.8090169943749471,0.5877852522924731) circle (2.5pt);
+					\draw[color=uuuuuu] (-0.9022414439533022,0.7090298303635292) node {\Large $z_2$};
+					\draw [fill=uuuuuu] (-0.8090169943749472,-0.5877852522924729) circle (2.5pt);
+					\draw[color=uuuuuu] (-0.9022414439533022,-0.7081143470310872) node {\Large $z_3$};
+					\draw [fill=uuuuuu] (0.30901699437494723,-0.9510565162951534) circle (2.5pt);
+					\draw[color=uuuuuu] (0.42756333225017244,-1.1490152839400384) node {\Large $z_4$};
+				\end{scriptsize}
+			\end{axis}
+		\end{tikzpicture}
+	\caption{Beispiel: Fünfte Wurzeln aus $1$}
+	\end{center}
 
-\begin{center}
-	\definecolor{zzttqq}{rgb}{0.6,0.2,0}
-	\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1}
-	\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
-	\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
-		\begin{axis}[
-			x=2.5cm,y=2.5cm,
-			axis lines=middle,
-			ymajorgrids=true,
-			xmajorgrids=true,
-			xlabel={$Re(z)$},
-			ylabel={$Im(z)$},
-			xmin=-2.0741831415874628,
-			xmax=2.074491179889266,
-			ymin=-1.8844974113330106,
-			ymax=1.5592395660879161,
-			xtick={-2,-1.5,...,2},
-			ytick={-2,-1.5,...,2},]
-			\clip(-2.0741831415874628,-1.8844974113330106) rectangle (2.074491179889266,1.5592395660879161);
-			\draw [line width=1pt] (0,0) circle (2.5cm);
-			\draw [line width=1pt,color=zzttqq] (1,0)-- (0.30901699437494745,0.9510565162951535);
-			\draw [line width=1pt,color=zzttqq] (0.30901699437494745,0.9510565162951535)-- (-0.8090169943749471,0.5877852522924731);
-			\draw [line width=1pt,color=zzttqq] (-0.8090169943749471,0.5877852522924731)-- (-0.8090169943749472,-0.5877852522924729);
-			\draw [line width=1pt,color=zzttqq] (-0.8090169943749472,-0.5877852522924729)-- (0.30901699437494723,-0.9510565162951534);
-			\draw [line width=1pt,color=zzttqq] (0.30901699437494723,-0.9510565162951534)-- (1,0);
-			\begin{scriptsize}
-				\draw [fill=uuuuuu] (0,0) circle (2pt);
-				\draw [fill=uuuuuu] (1,0) circle (2.5pt);
-				\draw[color=uuuuuu] (1.1356361465438737,0.10214419464243102) node {\Large $z_0$};
-				\draw [fill=uuuuuu] (0.30901699437494745,0.9510565162951535) circle (2.5pt);
-				\draw[color=uuuuuu] (0.42756333225017244,1.123036732249006) node {\Large $z_1$};
-				\draw [fill=uuuuuu] (-0.8090169943749471,0.5877852522924731) circle (2.5pt);
-				\draw[color=uuuuuu] (-0.9022414439533022,0.7090298303635292) node {\Large $z_2$};
-				\draw [fill=uuuuuu] (-0.8090169943749472,-0.5877852522924729) circle (2.5pt);
-				\draw[color=uuuuuu] (-0.9022414439533022,-0.7081143470310872) node {\Large $z_3$};
-				\draw [fill=uuuuuu] (0.30901699437494723,-0.9510565162951534) circle (2.5pt);
-				\draw[color=uuuuuu] (0.42756333225017244,-1.1490152839400384) node {\Large $z_4$};
-			\end{scriptsize}
-		\end{axis}
-	\end{tikzpicture}
 	
-	\begin{small}
-		Abbildung $2$: Beispiel: Fünfte Wurzeln aus $1$
-	\end{small}
-\end{center}
+\end{figure}
+
 
 Wollen wir die $n$-ten Wurzeln aus einer beliebigen komplexen Zahl $z=r\cdot e^i\varphi$ ziehen, wir das obengenannte $n$-Eck skaliert und gedreht.
 Genauer gesagt:\\
@@ -518,68 +544,71 @@ sind, wobei $z$ eine $n$-te Wurzel von $1$ ist.
 Diese restlichen Ecken nennen wir nun $w_1$, $w_2$,$\dots$,$w_{n-1}$, dabei ist $w_n = w_0 = 1$.
 Unser Vieleck sieht nun folgendermaßen aus:
 
-\begin{center}
+\begin{figure}
+	\begin{center}
+		
+		\definecolor{zzttqq}{rgb}{0.6,0.2,0}
+		\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+		\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+			\begin{axis}[
+				x=1cm,y=1cm,
+				axis lines=middle,
+				ymajorgrids=true,
+				xmajorgrids=true,
+				scale=3,
+				xmin=-1.7,
+				xmax=1.7,
+				ymin=-1.7,
+				ymax=1.7,
+				xlabel={$Re(z)$},
+				ylabel={$Im(z)$},
+				xtick={-2,-1.5,...,2},
+				ytick={-2,-1.5,...,2},
+				ytick pos=right,
+				yticklabel={\SI[round-mode=places, round-precision=1]{\tick}{}}
+				]
+				\clip(-2.038767629087051,-1.7478947202599961) rectangle (1.7928535328621873,1.7464358464472318);
+				\fill[line width=3.2pt,color=zzttqq,fill=zzttqq,fill opacity=0.2] (1,0) -- (0.6234898018587336,0.7818314824680298) -- (-0.2225209339563141,0.9749279121818236) -- (-0.9009688679024188,0.4338837391175584) -- (-0.9009688679024189,-0.43388373911755773) -- (-0.22252093395631456,-0.9749279121818234) -- (0.6234898018587333,-0.7818314824680298) -- cycle;
+				\draw [line width=0.5pt] (0,0) circle (3cm);
+				\draw [line width=3.2pt,color=zzttqq] (1,0)-- (0.6234898018587336,0.7818314824680298);
+				\draw [line width=3.2pt,color=zzttqq] (0.6234898018587336,0.7818314824680298)-- (-0.2225209339563141,0.9749279121818236);
+				\draw [line width=3.2pt,color=zzttqq] (-0.2225209339563141,0.9749279121818236)-- (-0.9009688679024188,0.4338837391175584);
+				\draw [line width=3.2pt,color=zzttqq] (-0.9009688679024188,0.4338837391175584)-- (-0.9009688679024189,-0.43388373911755773);
+				\draw [line width=3.2pt,color=zzttqq] (-0.9009688679024189,-0.43388373911755773)-- (-0.22252093395631456,-0.9749279121818234);
+				\draw [line width=3.2pt,color=zzttqq] (-0.22252093395631456,-0.9749279121818234)-- (0.6234898018587333,-0.7818314824680298);
+				\draw [line width=3.2pt,color=zzttqq] (0.6234898018587333,-0.7818314824680298)-- (1,0);
+				\draw [line width=2pt] (1,0)-- (0.6234898018587336,0.7818314824680298);
+				\draw [line width=1.2pt] (1,0)-- (-0.2225209339563141,0.9749279121818236);
+				\draw [line width=2pt] (1,0)-- (-0.9009688679024188,0.4338837391175584);
+				\draw [line width=2pt] (1,0)-- (-0.9009688679024189,-0.43388373911755773);
+				\draw [line width=2pt] (1,0)-- (-0.22252093395631456,-0.9749279121818234);
+				\draw [line width=2pt] (1,0)-- (0.6234898018587333,-0.7818314824680298);
+				\begin{scriptsize}
+					\draw [fill=uuuuuu] (1,0) circle (2pt);
+					\draw[color=uuuuuu] (1.15,0.10) node {\Large $w_0$};
+					\draw [fill=uuuuuu] (0.6234898018587336,0.7818314824680298) circle (2pt);
+					\draw[color=uuuuuu] (0.8,0.9) node {\Large $w_1$};
+					\draw [fill=uuuuuu] (-0.2225209339563141,0.9749279121818236) circle (2pt);
+					\draw[color=uuuuuu] (-0.19041516716083384,1.15) node {\Large $w_2$};
+					\draw [fill=uuuuuu] (-0.9009688679024188,0.4338837391175584) circle (2pt);
+					\draw[color=uuuuuu] (-0.95,0.5962749166719764) node {\Large $w_3$};
+					\draw [fill=uuuuuu] (-0.9009688679024189,-0.43388373911755773) circle (2pt);
+					\draw[color=uuuuuu] (-1,-0.5) node {\Large $w_4$};
+					\draw [fill=uuuuuu] (-0.22252093395631456,-0.9749279121818234) circle (2pt);
+					\draw[color=uuuuuu] (-0.3,-1.15) node {\Large $w_5$};
+					\draw [fill=uuuuuu] (0.6234898018587333,-0.7818314824680298) circle (2pt);
+					\draw[color=uuuuuu] (0.75,-0.9) node {\Large $w_6$};
+				\end{scriptsize}
+			\end{axis}
+		\end{tikzpicture}
+		
+		
+		\caption{Skizze zur Aufgabenstellung}
+		
+		
+	\end{center}
+\end{figure}
 
-\definecolor{zzttqq}{rgb}{0.6,0.2,0}
-\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
-	\begin{axis}[
-		x=1cm,y=1cm,
-		axis lines=middle,
-		ymajorgrids=true,
-		xmajorgrids=true,
-		scale=3,
-		xmin=-1.7,
-		xmax=1.7,
-		ymin=-1.7,
-		ymax=1.7,
-		xlabel={$Re(z)$},
-		ylabel={$Im(z)$},
-		xtick={-2,-1.5,...,2},
-		ytick={-2,-1.5,...,2},
-		ytick pos=right,
-		yticklabel={\SI[round-mode=places, round-precision=1]{\tick}{}}
-		]
-		\clip(-2.038767629087051,-1.7478947202599961) rectangle (1.7928535328621873,1.7464358464472318);
-		\fill[line width=3.2pt,color=zzttqq,fill=zzttqq,fill opacity=0.2] (1,0) -- (0.6234898018587336,0.7818314824680298) -- (-0.2225209339563141,0.9749279121818236) -- (-0.9009688679024188,0.4338837391175584) -- (-0.9009688679024189,-0.43388373911755773) -- (-0.22252093395631456,-0.9749279121818234) -- (0.6234898018587333,-0.7818314824680298) -- cycle;
-		\draw [line width=0.5pt] (0,0) circle (3cm);
-		\draw [line width=3.2pt,color=zzttqq] (1,0)-- (0.6234898018587336,0.7818314824680298);
-		\draw [line width=3.2pt,color=zzttqq] (0.6234898018587336,0.7818314824680298)-- (-0.2225209339563141,0.9749279121818236);
-		\draw [line width=3.2pt,color=zzttqq] (-0.2225209339563141,0.9749279121818236)-- (-0.9009688679024188,0.4338837391175584);
-		\draw [line width=3.2pt,color=zzttqq] (-0.9009688679024188,0.4338837391175584)-- (-0.9009688679024189,-0.43388373911755773);
-		\draw [line width=3.2pt,color=zzttqq] (-0.9009688679024189,-0.43388373911755773)-- (-0.22252093395631456,-0.9749279121818234);
-		\draw [line width=3.2pt,color=zzttqq] (-0.22252093395631456,-0.9749279121818234)-- (0.6234898018587333,-0.7818314824680298);
-		\draw [line width=3.2pt,color=zzttqq] (0.6234898018587333,-0.7818314824680298)-- (1,0);
-		\draw [line width=2pt] (1,0)-- (0.6234898018587336,0.7818314824680298);
-		\draw [line width=1.2pt] (1,0)-- (-0.2225209339563141,0.9749279121818236);
-		\draw [line width=2pt] (1,0)-- (-0.9009688679024188,0.4338837391175584);
-		\draw [line width=2pt] (1,0)-- (-0.9009688679024189,-0.43388373911755773);
-		\draw [line width=2pt] (1,0)-- (-0.22252093395631456,-0.9749279121818234);
-		\draw [line width=2pt] (1,0)-- (0.6234898018587333,-0.7818314824680298);
-		\begin{scriptsize}
-			\draw [fill=uuuuuu] (1,0) circle (2pt);
-			\draw[color=uuuuuu] (1.15,0.10) node {\Large $w_0$};
-			\draw [fill=uuuuuu] (0.6234898018587336,0.7818314824680298) circle (2pt);
-			\draw[color=uuuuuu] (0.8,0.9) node {\Large $w_1$};
-			\draw [fill=uuuuuu] (-0.2225209339563141,0.9749279121818236) circle (2pt);
-			\draw[color=uuuuuu] (-0.19041516716083384,1.1) node {\Large $w_2$};
-			\draw [fill=uuuuuu] (-0.9009688679024188,0.4338837391175584) circle (2pt);
-			\draw[color=uuuuuu] (-0.95,0.5962749166719764) node {\Large $w_3$};
-			\draw [fill=uuuuuu] (-0.9009688679024189,-0.43388373911755773) circle (2pt);
-			\draw[color=uuuuuu] (-1,-0.5) node {\Large $w_4$};
-			\draw [fill=uuuuuu] (-0.22252093395631456,-0.9749279121818234) circle (2pt);
-			\draw[color=uuuuuu] (-0.3,-1.1) node {\Large $w_5$};
-			\draw [fill=uuuuuu] (0.6234898018587333,-0.7818314824680298) circle (2pt);
-			\draw[color=uuuuuu] (0.75,-0.9) node {\Large $w_6$};
-		\end{scriptsize}
-	\end{axis}
-\end{tikzpicture}
-
-\begin{small}
-	Abbildung 3: Skizze zur Aufgabenstellung
-\end{small}
-
-\end{center}
 
 
 
@@ -665,9 +694,7 @@ $X$ ist das Produkt der Längen aller Strecken, die eine Ecke des ursprüngliche
 
 
 \renewcommand{\refname}{Printquellen}  % Name des Literaturverzeichnisses
-
-Printquellen
-
+\small
 \begin{thebibliography}{9}
 %	\addcontentsline{toc}{section}{\refname}	% Literaturverzeichniss als Punkt in der Gliederung
 	\bibitem{Zitat} Pieper, Herbert: Die komplexen Zahlen. Berlin $^3 1991$
@@ -688,6 +715,20 @@ Printquellen
 	\bibitem{Zitat} Борис Трушин: Комплексные числа. Тригонометрическая форма. Формула Муавра, \url{https://www.youtube.com/watch?v=GGaZ5IJEjXw} (10.11.2020 - 02.37 Uhr)
 	\bibitem{Zitat} Онлайн Уроки: Занятие 29 Комплексные числа в геометрии, \url{https://youtu.be/geEP9gfv5m4?t=6941} (10.11.2020 - 03.03 Uhr)
 \end{thebibliography}
+
+
+\section{Bildverzeichnis}
+\small
+\listoffigures
+
+
+
+
+
+
+
+
+
 
 \end{document} % Dokumentende
 
