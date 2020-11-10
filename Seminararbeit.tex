@@ -113,11 +113,11 @@
 
 \section{Einleitung}
 
-Die Einführung der komplexen Zahlen war eine der wichtigsten Errungenschaft der Mathematik.
+Die Einführung der komplexen Zahlen war eine der wichtigsten Errungenschaften der Mathematik.
 Die Idee, dass man einen neuen Zahlenbereich benutzen könnte, welcher auf den ersten Blick keinerlei Realitätsbezug habe, wurde lange Zeit von Mathematikern aller Welt als sinnlos gesehen.\footnote{Vgl. Pieper: Die komplexen Zahlen. S. $193$.}
-Erst als das entdeckerische Verlangen, alle Geheimnisse unserer Welt über Zahlen zu lüften, die Wissenschaftler an das Ende aller anschaulicher und einfacher Mathematik trieb, waren sie bereit, diesen Sprung zu wagen.\footnote{Vgl. Courant/Robbins: Was ist Mathematik? S. $71$.}
+Erst als das entdeckerische Verlangen, alle Geheimnisse unserer Welt über Zahlen zu lüften, die Wissenschaftler an das Ende aller anschaulicher und einfacher Mathematik trieb, waren sie dazu bereit, diesen Sprung zu wagen.\footnote{Vgl. Courant/Robbins: Was ist Mathematik? S. $71$.}
 Und mit erstaunlichem Erfolg.
-Denn Komplexe Zahlen bieten nicht nur einen Lösungsweg für Polynome höheren Grades, sondern können große Teile der Geometrie sehr einfach in rein algebraischer Form ausdrücken, mit welcher man viel bequemer umgehen kann.
+Denn Komplexe Zahlen bieten nicht nur einen Lösungsweg für Polynome höheren Grades, sondern können große Teile der Geometrie sehr einfach in rein algebraischer Form ausdrücken, mit welcher viel bequemer umgegangen werden kann.
 Insgesamt bildet das Rechnen in $\mathbb{C}$, dem Zahlenbereich der komplexen Zahlen, ein sehr wichtiges Werkzeug für eine Vielzahl von Naturwissenschaften.
 
 \section{Geschichte und Definition}
@@ -195,8 +195,8 @@ Wenn nun ein Polynom $f(x)$ des $n$-ten Grades vorliegt, so besagt die erste Fas
 wobei sich f(x) restlos durch $(x-x_0)$ teilt und $g(x)$ ein Polynom der Ordnung $n-1$ ist.
 Dieses $g(x)$ hat jedoch nach dem Fundamentalsatz auch eine Nullstelle $x_1$.
 Es lässt sich durch $(x-x_1)$ restlos teilen und damit folgt $f(x) = (x-x_0) \cdot (x-x_1) \cdot h(x)$.
-Dieselbe Überlegungen können bei $h(x)$ angewandt werden und so weiter, wobei der Grad der Funktion in Term bei jedem Schritt sich um $1$ verkleinert.
-Insgesamt lässt sich diese Methode auf dem Polynom $n$ mal verwenden und es teilt sich ohne Rest in $n$ Faktoren auf.\footnote{Vgl. Schmidt: Elementare Technomathematik. S. $322$.}\\
+Dieselbe Überlegungen können bei $h(x)$ angewandt werden und so weiter, wobei der Grad der Funktion in Term auf der rechten Seite der Gleichung bei jedem Schritt sich um $1$ verkleinert.
+Insgesamt lässt sich diese Methode auf das Polynom $n$ mal anwenden und es teilt sich ohne Rest in $n$ Faktoren auf.\footnote{Vgl. Schmidt: Elementare Technomathematik. S. $322$.}\\
 
 Hiermit kann jedes Polynom $n$-ten Grades in $n$ Faktoren zerteilt werden.
 Dabei bildet es die Form
@@ -256,7 +256,7 @@ Somit ist die Realachse gleichzeitig auch die Zahlengerade von $\mathbb{R}$, da 
 Wir können nun komplexe Zahlen als Punkte in einem Koordinatensystem betrachten.
 Statt der klassischen Angabe der Position mit zwei Werten, einen für jede Achse, kann jeder Punkt auch durch seine Polarkoordinaten definiert werden.
 Dabei wird von einem Vektor, der im Ursprung beginnt und an dem zu beschreibenden Punkt endet, dessen Winkel $\varphi$ zur Realachse und die Länge dieses Vektors $r$ angegeben. Diese Länge $r$ wird der Betrag $r=|z|$ der komplexen Zahl $z$ genannt.
-Der "Winkel [$\varphi$] heißt das Argument oder die Phase, der komplexen Zahl $z$."\footnote{Ansorge/Oberle/Rothe/Sonar: Mathematik für Ingenieure. S.$35$.}
+Der "Winkel [$\varphi$] heißt das \textbf{Argument} oder die \textbf{Phase}, der komplexen Zahl $z$."\footnote{Ansorge/Oberle/Rothe/Sonar: Mathematik für Ingenieure. S.$35$.}
 
 In einem solchen Fall wäre bei der Realteil der Zahl gleich $Re(z)=r\cdot \cos(\varphi)$ und der Imaginärteil $Im(z)=r\cdot \sin(\varphi)$.
 Jede komplexe Zahl ist also gleich
@@ -347,7 +347,7 @@ Nach analogem Verfahren erhält man auch die Sinusfunktion als Reihe
 	\sin(x)=\frac{x}{1!}-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\dots
 \end{equation}
 
-Mithilfe des Sinus und Kosinus können wir nun komplexe Zahlen als Polynome aufschreiben. Sehen wir uns der Einfachheit halber zuerst eine Zahl an, die auf dem Einheitskreis liegt und damit als $r=1$ hat. Setzen wir \eqref{cos} und \eqref{sin} in \eqref{eq.trigon}, so folgt
+Mithilfe des Sinus und Kosinus können wir nun komplexe Zahlen als Polynome aufschreiben. Sehen wir uns der Einfachheit halber zuerst eine Zahl an, die auf dem Einheitskreis liegt und damit als $r=1$ hat. Setzen wir \eqref{cos} und \eqref{sin} in \eqref{eq.trigon} ein, so folgt
 \begin{equation}\label{taylor}
 	z=%\cdot(\cos(\varphi)+i\cdot \sin(\varphi))=
 	\left(1-\frac{x^2}{2!}+\frac{x^4}{4!}-\frac{x^6}{6!}+\dots\right)+i\left(\frac{x}{1!}-\frac{x^3}{3!}+\frac{x^5}{5!}-\frac{x^7}{7!}+\dots\right)
@@ -364,7 +364,7 @@ Dabei beachten wir, dass $e(0)=1$ und $e\prime(x)=e(x)$.
 
 
 Setzen wir in \eqref{taylor} als $x=\varphi$ und in \eqref{expo} $x=i\varphi$ ein.
-Bedenken wir, dass $i^2=-1$, $i^3=-i$ und $i^4=1$, entsteht durch Umformungen und Umgruppierungen:\footnote{Mathehilfe: Exponentialform der komplexen Zahlen.}
+Bedenken wir, dass $i^2=-1$, $i^3=-i$ und $i^4=1$, so entsteht durch Umformungen und Umgruppierungen:\footnote{Mathehilfe: Exponentialform der komplexen Zahlen.}
 
 \begin{multline}
 	e^{i\varphi}=1+\frac{i\varphi}{1!}+\frac{i^2\varphi^2}{2!}+\frac{i^3\varphi^3}{3!}+\frac{i^4\varphi^4}{4!}+\dots=
@@ -379,7 +379,7 @@ Hierbei handelt es sich um die berühmte \emph{"{}Eulersche Formel"}, welche bes
 
 "Mithilfe der Eulerschen Formel können wir jetzt eine beliebige komplexe Zahl umformen in die
 \begin{equation}
-	\textrm{Exponentialform:  } z=r(\cos \varphi + \sin \varphi)= r e^{i\varphi}
+	\textrm{\textbf{Exponentialform}:  } z=r(\cos \varphi + \sin \varphi)= r e^{i\varphi}
 \end{equation}
 mit $r=|z|$ und $\varphi=arg(z)$."\footnote{{Schmidt: Elementare Technomathematik. S. $299$.}}\\
 
@@ -504,7 +504,7 @@ Damit ist die graphische Darstellung beliebiger Wurzeln aus $1$, und damit der L
 \end{figure}
 
 
-Wollen wir die $n$-ten Wurzeln aus einer beliebigen komplexen Zahl $z=r\cdot e^i\varphi$ ziehen, wir das obengenannte $n$-Eck skaliert und gedreht.
+Wollen wir die $n$-ten Wurzeln aus einer beliebigen komplexen Zahl $z=r\cdot e^{i\varphi}$ ziehen, wir das obengenannte $n$-Eck skaliert und gedreht.
 Genauer gesagt:\\
 
 \noindent\emph{"{}Eine komplexe Zahl $z=r e^{i\varphi}$ besitzt genau $n$ verschiedene Wurzeln}
@@ -603,7 +603,7 @@ Unser Vieleck sieht nun folgendermaßen aus:
 		\end{tikzpicture}
 		
 		
-		\caption{Skizze zur Aufgabenstellung}
+		\caption{Skizze zur Aufgabenstellung bei $n=7$}
 		
 		
 	\end{center}
