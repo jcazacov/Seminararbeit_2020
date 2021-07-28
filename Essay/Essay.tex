@@ -1,0 +1,233 @@
+\documentclass[a4paper,12pt]{article} % Dokunmentklasse
+%%% Arbeit mit Sprache
+\usepackage{cmap}					% Suche im PDF
+\usepackage[T2A]{fontenc}			% Kodierung
+\usepackage[utf8]{inputenc}			% Kodierung Ursprungstext
+\usepackage[ngerman]{babel}	% Sprache
+
+\usepackage{misccorr} % Punkte in den Kapiteln
+\usepackage{tocloft} % Punkt im Inhaltsverzeichniss
+%\renewcommand{\cftsecaftersnum}{.}
+
+\usepackage{hyperref} %Internet URLs
+
+%%% Erweiterungen für Mathematik
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
+\usepackage{icomma} % Intelligent comma
+
+%% Formelnummer
+\mathtoolsset{showonlyrefs=true} % Zeigt die Nummer der Formel nur wenn mit \eqref{} auf sie im Text verwiesen wird.
+
+%%% Seite
+\usepackage{extsizes} % Mehr verschiedener Schriftgrößen
+\usepackage{geometry} % Einstellung der Ränder
+\geometry{top=25mm}
+\geometry{bottom=25mm}
+\geometry{left=35mm}
+\geometry{right=25mm}
+
+\usepackage{fancyhdr} % Kopf- und Fußzeile
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0mm}  % Dicke der Linie unter der Kopfzeile
+%\lfoot{Unten Links}
+%\rfoot{Unten Rechts}
+\rhead{ }
+%\chead{Oben Mitte}
+%\lhead{Oben Links}
+% \cfoot{Unten Mitte} % falls nicht angegeben: Seitennummer
+
+\usepackage{setspace} % Zeilenabstand
+\onehalfspacing % Zeilenabstand 1.5
+%\doublespacing % Zeilenabstand 2
+%\singlespacing % Zeilenabstand 1
+
+\usepackage{float} %Bilder festnageln
+
+%% Schriften
+\usepackage{euscript}
+%\usepackage{times}
+%\usepackage{mathptmx} %times
+\usepackage{mathrsfs} % Schöne Matheschrift
+
+%% Zeilenumbruch in Formeln
+\newcommand*{\hm}[1]{#1\nobreak\discretionary{}
+{\hbox{$\mathsurround=0pt #1$}}{}}
+
+
+%%% Kopfzeile
+\author{Jacob Cazacov}
+\title{Komplexe Zahlen von algebraischer Sicht aus betrachtet}
+\date{\today}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\usepackage{cite} % Bibliographie
+%\usepackage[superscript]{cite} % Verweise in obere Zeilen
+%\usepackage[nocompress]{cite} % 
+\usepackage{csquotes} % Weiteres Werkzeug für Verweise
+
+
+\usepackage{pgfplots} %Geogebra
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\usepackage{siunitx}
+
+
+
+
+
+\begin{document} % Dokumentbeginn
+
+\section{Anwendung der komplexen Zahlen zur Lösung geometrischer Aufgaben}
+
+Demonstrieren wir die Nützlichkeit der komplexen Zahlen an einer Aufgabe, welche auf den ersten Blick sich gar nicht mit Algebra lösen lässt, da sie aus der Geometrie stammt:
+
+''\textit{In einen Einheitskreis wird ein regelmäßiges $n$-Eck eingezeichnet, sodass alle Ecken auf der Kreislinie liegen.
+Eine der Ecken wird mit jeweils jeder anderen Ecke durch Strecken verbunden.
+Was ist das Produkt der Längen dieser Strecken?}''
+
+
+
+Setzen wir den Ursprung unseres Koordinatensystems in den Mittelpunkt des Kreises und richten es so aus, dass die Achse der Realteile durch eine der Ecken durchläuft.
+Jene Ecke mit den Koordinaten $(1,0)$ nennen wir $w_0$ und von dieser Ecke aus werden wir auch die Linien zu den anderen Ecken ziehen.
+
+\begin{figure}
+	\begin{center}
+		
+		\definecolor{zzttqq}{rgb}{0.6,0.2,0}
+		\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+		\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+			\begin{axis}[
+				x=1cm,y=1cm,
+				axis lines=middle,
+				ymajorgrids=true,
+				xmajorgrids=true,
+				scale=3,
+				xmin=-1.2,
+				xmax=1.2,
+				ymin=-1.2,
+				ymax=1.2,
+				xlabel={$Re(z)$},
+				ylabel={$Im(z)$},
+				xtick={-2,-1.5,...,2},
+				ytick={-2,-1.5,...,2},
+				ytick pos=right,
+				yticklabel={\SI[round-mode=places, round-precision=1]{\tick}{}}
+				]
+				\clip(-2.038767629087051,-1.7478947202599961) rectangle (1.7928535328621873,1.7464358464472318);
+				\fill[line width=3.2pt,color=zzttqq,fill=zzttqq,fill opacity=0.2] (1,0) -- (0.6234898018587336,0.7818314824680298) -- (-0.2225209339563141,0.9749279121818236) -- (-0.9009688679024188,0.4338837391175584) -- (-0.9009688679024189,-0.43388373911755773) -- (-0.22252093395631456,-0.9749279121818234) -- (0.6234898018587333,-0.7818314824680298) -- cycle;
+				\draw [line width=0.5pt] (0,0) circle (3cm);
+				\draw [line width=3.2pt,color=zzttqq] (1,0)-- (0.6234898018587336,0.7818314824680298);
+				\draw [line width=3.2pt,color=zzttqq] (0.6234898018587336,0.7818314824680298)-- (-0.2225209339563141,0.9749279121818236);
+				\draw [line width=3.2pt,color=zzttqq] (-0.2225209339563141,0.9749279121818236)-- (-0.9009688679024188,0.4338837391175584);
+				\draw [line width=3.2pt,color=zzttqq] (-0.9009688679024188,0.4338837391175584)-- (-0.9009688679024189,-0.43388373911755773);
+				\draw [line width=3.2pt,color=zzttqq] (-0.9009688679024189,-0.43388373911755773)-- (-0.22252093395631456,-0.9749279121818234);
+				\draw [line width=3.2pt,color=zzttqq] (-0.22252093395631456,-0.9749279121818234)-- (0.6234898018587333,-0.7818314824680298);
+				\draw [line width=3.2pt,color=zzttqq] (0.6234898018587333,-0.7818314824680298)-- (1,0);
+				\draw [line width=2pt] (1,0)-- (0.6234898018587336,0.7818314824680298);
+				\draw [line width=1.2pt] (1,0)-- (-0.2225209339563141,0.9749279121818236);
+				\draw [line width=2pt] (1,0)-- (-0.9009688679024188,0.4338837391175584);
+				\draw [line width=2pt] (1,0)-- (-0.9009688679024189,-0.43388373911755773);
+				\draw [line width=2pt] (1,0)-- (-0.22252093395631456,-0.9749279121818234);
+				\draw [line width=2pt] (1,0)-- (0.6234898018587333,-0.7818314824680298);
+				\begin{scriptsize}
+					\draw [fill=uuuuuu] (1,0) circle (2pt);
+					\draw[color=uuuuuu] (1.15,0.10) node {\Large $w_0$};
+					\draw [fill=uuuuuu] (0.6234898018587336,0.7818314824680298) circle (2pt);
+					\draw[color=uuuuuu] (0.8,0.9) node {\Large $w_1$};
+					\draw [fill=uuuuuu] (-0.2225209339563141,0.9749279121818236) circle (2pt);
+					\draw[color=uuuuuu] (-0.19041516716083384,1.15) node {\Large $w_2$};
+					\draw [fill=uuuuuu] (-0.9009688679024188,0.4338837391175584) circle (2pt);
+					\draw[color=uuuuuu] (-0.95,0.5962749166719764) node {\Large $w_3$};
+					\draw [fill=uuuuuu] (-0.9009688679024189,-0.43388373911755773) circle (2pt);
+					\draw[color=uuuuuu] (-1,-0.5) node {\Large $w_4$};
+					\draw [fill=uuuuuu] (-0.22252093395631456,-0.9749279121818234) circle (2pt);
+					\draw[color=uuuuuu] (-0.3,-1.15) node {\Large $w_5$};
+					\draw [fill=uuuuuu] (0.6234898018587333,-0.7818314824680298) circle (2pt);
+					\draw[color=uuuuuu] (0.75,-0.9) node {\Large $w_6$};
+				\end{scriptsize}
+			\end{axis}
+		\end{tikzpicture}
+		
+	\end{center}
+\end{figure}
+
+Wenn wir nun alle Ecken als komplexe Zahlen ansehen, so können wir die Kreisteilungsgleichungen verwenden und stellen fest, dass die Ecken die Lösungen der Gleichung
+\begin{equation}
+	z^n=1
+\end{equation}
+sind, wobei $z$ eine $n$-te Wurzel von $1$ ist.
+Diese restlichen Ecken nennen wir nun $w_1$, $w_2$,$\dots$,$w_{n-1}$, dabei ist $w_n = w_0 = 1$.
+Unser Vieleck sieht nun folgendermaßen aus:
+
+
+
+
+
+
+Jeder Punkt in einem Koordinatensystem lässt sich durch dessen Ortsvektor, einen Vektor beginnend im Ursprung und endend in diesem Punkt, beschreiben. Komplexe Zahlen in ihrer geometrischer Darstellung werden genauso addieren und subtrahieren wie Vektoren und aus den Regeln der Subtraktion von Vektoren folgt, dass die Strecke, welche die Punkte $w_0$ und $w_k$ verbindet, gleich dem Vektor $\vec{v_k}=\vec{w_k}-\vec{w_0}$ ist.
+Der Punkt $w_0$ hat die Koordinaten (1,0) und somit ist die Länge des Vektors $\vec{v_k}$ gleich dem Betrag der Differenz der komplexen Zahlen $w_k$ und $1$, also $|w_k-1|$.
+
+
+In der Aufgabenstellung wird nach dem Produkt aller solcher Verbindungsstrecken gefragt.
+Dieses Produkt, welches wir nun $X$ nennen, ist demnach gleich
+\[X = |w_1-1|\cdot|w_2-1|\cdot\ldots\cdot|w_{n-1}-1|\]
+Aus den Eigenschaften des Betrags folgt, dass sich $|w_k-1|$ durch $|1-w_k|$ ersetzten lässt.
+Das gesamte Produkt entspricht dann
+\[X=|1-w_1|\cdot|1-w_2|\cdot\ldots\cdot|1-w_{n-1}|\]
+Nach den Regeln der Multiplikation von Beträgen ist das Produkt der Beträge gleich dem Betrag des Produkts. Damit gilt
+\begin{equation}\label{X}
+	X=|(1-w_1)\cdot(1-w_2)\cdot\ldots\cdot(1-w_{n-1})|
+\end{equation}
+
+An dieser Stelle lasst uns den Term, welcher innerhalb der Betragsstriche in $X$ liegt, ansehen.
+Nennen wir diesen Term $H$. Damit ist
+\begin{equation}
+	X=|H| \textrm{\quad wobei \quad}	H=(1-w_1)\cdot(1-w_2)\cdot\ldots\cdot(1-w_{n-1})
+\end{equation}
+
+Erinnern wir uns, dass die Eckpunkte des Vielecks auf dem Einheitskreis auch als Lösungen der Gleichung $z^n=1$ beziehungsweise $z^n-1=0$ betrachtet werden konnten. Die Folge \eqref{eq.faktor} des Fundamentalsatzes der Algebra besagt nun, dass 
+\[z^n-1=(z-w_0)\cdot(z-w_1)\cdot(z-w_2)\cdot\ldots\cdot(z-w_{n-1})\]
+da $w_0=1$ ist, schließt sich
+\[z^n-1=(z-1)\cdot(z-w_1)\cdot(z-w_2)\cdot\ldots\cdot(z-w_{n-1})\]
+Bei $z=1$ ist diese Gleichung nahezu identisch mit $H$ .
+Der einzige Unterschied ist der erste Faktor $(z-1)$, welcher bei $H$ fehlt.
+Möchten wir nun unsere Gleichung ohne diesen Faktor berechnen, so müssen wir sie durch $(z-1)$ teilen und es entsteht
+\begin{equation}
+	H=(z-w_1)\cdot(z-w_2)\cdot\ldots\cdot(z-w_{n-1})=\frac{z^n-1}{z-1}=\frac{1-z^n}{1-z\hspace{2mm}} \quad \textrm{ bei } z=1
+\end{equation}
+
+
+Dabei fällt auf, dass $\frac{1-z^n}{1-z\hspace{1mm}}$ die Zusammenfassung einer geometrischen Reihe ist:
+
+
+
+
+\[\frac{1-z^n}{1-z\hspace{2mm}}=1+z+z^2+z^3+\dots+z^{n-1}\]
+bei $z=1$ gilt:
+\[H=\frac{z^n-1}{z-1}=1+1+1^2+1^3+\dots+1^{n-1}=n\]
+da die $1$ in dieser geometrischen Reihe insgesamt $n$ mal als Summand vorliegt.
+
+
+Daraus schließt sich
+\[X=|H|=|n|=n\]
+da $n$ eine natürliche Zahl ist\\
+
+$X$ ist das Produkt der Längen aller Strecken, die eine Ecke des ursprünglichen Vielecks mit den restlichen verbinden. Somit ist die Aufgabe gelöst:\\
+
+
+
+
+\end{document} % Dokumentende
+
